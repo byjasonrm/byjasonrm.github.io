@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root{
+    --main-type:'Inter', sans-serif;
+    --secondary-type:"Questrial";
+    --cover:rgba(0, 0, 0, 0.8);
+}
+
+*{
+    padding:0;
+    margin:0;
+    font-family:var(--main-type);
+}
+
+body{
+    background:url(https://cdn.dribbble.com/users/2132441/screenshots/14604831/media/18ed4448bacc412fc22b2ab727720361.png) center center no-repeat;
+    background-size:cover;
+}
+
+.max-width{
+    margin:0px auto;
+    width:80%;
+    max-width:1200px;
+}
+
+.display-none{
+    display:none;
+}
+
+hero{
+    display:block;
+    width:100%;
+    height:100vh;
+    background:var(--cover);
+}
+
+nav{
+    width:100%;
+    color:#fff;
+    padding:30px 0;
+    background:var(--cover);
+}
+
+.nav-content{
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.nav-logo{
+    flex-grow: 1;
+}
+
+.nav-logo img{
+    object-fit: contain;
+    height:30px;
+}
+
+.nav-menu-items{
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.nav-menu-item{
+    margin:0px 30px;
+    font-size:14px;
+    font-weight:200;
+}
+
+.nav-menu-item i {
+}
+
+.menu{
+    display:none;
+    font-size: 20px;
+}
+
+
+menu{
+    display:block;
+    width:80%;
+    background:#fff;
+    position:absolute;
+    top:20px;
+    max-width:900px;
+    left:50%;
+    transform:translateX(-50%) scale(0);
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+}
+
+menu h3{
+    margin:0 0 20px 0;
+}
+
+.menu-close{
+    color:#858585;
+    font-weight:200;
+    text-align: right;
+    padding:20px 20px 0 0;
+}
+
+.show-menu{
+    transform:translateX(-50%) scale(1);
+    transition: all ease-in-out .3s;
+}
+
+.menu-item{
+    color:#000;
+    padding:20px 0;
+    font-weight:200;
+}
+
+.menu-item i{
+    vertical-align: middle;
+}
+
+.menu-content{
+    padding:30px;
+}
+
+.hero-content{
+    padding:30vh 0;
+    color:#fff;
+}
+
+.hero-content p{
+    margin:20px 0;
+    font-weight:200;
+}
+
+.hero-content-container{
+    max-width: 400px;
+}
+
+.hero-tags{
+    display:flex;
+    align-items: center;
+}
+
+.hero-tag{
+    margin:5px 5px 5px 5px;
+    font-weight:200;
+    font-size:9px;
+    background:rgba(253, 253, 253, 1);
+    border-radius:150px;
+    padding:5px 20px;
+    color:#000;
+}
+
+.hero-ctas{
+    display:flex;
+    flex-wrap: wrap;
+    font-weight:200;
+}
+
+.hero-ctas > div{
+    margin:0 40px 0 0;
+}
+
+.hero-cta-action{
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.hero-cta-icon i{
+    vertical-align: middle;
+    font-size:25px;
+}
+
+.hero-cta-text{
+    vertical-align: middle;
+    margin:0 0 0 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .menu{
+        display:block;
+    }
+
+    .books, .wall-of-fame, .shop, .membership{
+        display:none;
+    }
+}
