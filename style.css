@@ -40,12 +40,15 @@ nav{
     color:#fff;
     padding:30px 0;
     background:var(--cover);
+    
 }
+
 
 .nav-content{
     display:flex;
     flex-wrap: nowrap;
     align-items: center;
+    animation: navappear 1.3s forwards;
 }
 
 .nav-logo{
@@ -89,6 +92,7 @@ menu{
     transform:translateX(-50%) scale(0);
     border-radius: 10px;
     transition: all ease-in-out .3s;
+    z-index:900;
 }
 
 menu h3{
@@ -122,8 +126,9 @@ menu h3{
 }
 
 .hero-content{
-    padding:30vh 0;
+    padding:25vh 0 0 0;
     color:#fff;
+    animation: appear 1.3s forwards;
 }
 
 .hero-content p{
@@ -144,10 +149,12 @@ menu h3{
     margin:5px 5px 5px 5px;
     font-weight:200;
     font-size:9px;
-    background:rgba(253, 253, 253, 1);
+    background: rgba(70, 70, 70, 0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     border-radius:150px;
     padding:5px 20px;
-    color:#000;
+    color:#fff;
 }
 
 .hero-ctas{
@@ -157,7 +164,7 @@ menu h3{
 }
 
 .hero-ctas > div{
-    margin:0 40px 0 0;
+    margin:20px 20px 0px 0;
 }
 
 .hero-cta-action{
@@ -174,6 +181,47 @@ menu h3{
 .hero-cta-text{
     vertical-align: middle;
     margin:0 0 0 10px;
+}
+
+.purchase-hero{
+    position:absolute;
+    bottom:50px;
+    color:#000;
+    padding:10px 20px;
+    border-radius:150px;
+    background: rgba(221, 221, 221, 0.9);
+    -webkit-backdrop-filter: saturate(100%) blur(10px);
+    backdrop-filter: saturate(100%) blur(10px);
+    font-size:12px;
+    font-weight:700;
+    left:10%;
+    transform:translateX(-10%);
+}
+
+.connect{
+    position:absolute;
+    bottom:20px;
+    right:10%;
+    transform:translateX(-10%);
+    color:#fff;
+    display:flex;
+    flex-wrap: nowrap;
+    font-size:20px;
+    align-items: center;
+}
+
+.connect > div{
+    padding:0 0 0 30px;
+}
+
+@keyframes navappear {
+    from{transform: translateY(-100px);}
+    to {transform: translateY(0);}
+}
+
+@keyframes appear {
+    from {transform: translateY(20px);}
+    to {transform: translateY(0);}
 }
 
 @media only screen and (max-width: 800px) {
