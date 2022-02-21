@@ -11,11 +11,12 @@
     padding:0;
     margin:0;
     font-family:var(--main-type);
+    box-sizing: border-box;
 }
 
 body{
-    background:url(https://cdn.dribbble.com/users/2132441/screenshots/14604831/media/18ed4448bacc412fc22b2ab727720361.png) center center no-repeat;
-    background-size:cover;
+    background:#000415;
+    min-height: 1500px;
 }
 
 .max-width{
@@ -32,15 +33,15 @@ hero{
     display:block;
     width:100%;
     height:100vh;
-    background:var(--cover);
+    background:#000415;
 }
 
 nav{
     width:100%;
     color:#fff;
     padding:30px 0;
-    background:var(--cover);
-    
+    position: fixed;
+    z-index:20000;
 }
 
 
@@ -53,6 +54,7 @@ nav{
 
 .nav-logo{
     flex-grow: 1;
+    color:#000;
 }
 
 .nav-logo img{
@@ -70,9 +72,11 @@ nav{
     margin:0px 30px;
     font-size:14px;
     font-weight:200;
+    color:#fff;
 }
 
 .nav-menu-item i {
+    color:#fff;
 }
 
 .menu{
@@ -85,14 +89,14 @@ menu{
     display:block;
     width:80%;
     background:#fff;
-    position:absolute;
+    position:fixed;
     top:20px;
     max-width:900px;
     left:50%;
     transform:translateX(-50%) scale(0);
     border-radius: 10px;
     transition: all ease-in-out .3s;
-    z-index:900;
+    z-index:30000;
 }
 
 menu h3{
@@ -213,6 +217,41 @@ menu h3{
 .connect > div{
     padding:0 0 0 30px;
 }
+
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+section:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #000415, transparent);
+    z-index: 10000;
+}
+
+.section-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+
+#main{
+    z-index: 2;
+}
+  
+  
+  
 
 @keyframes navappear {
     from{transform: translateY(-100px);}
