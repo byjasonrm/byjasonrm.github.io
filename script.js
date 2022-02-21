@@ -16,7 +16,7 @@ $(document).ready(function(){
         $("#stars").css('top', -value*0.5 + 'px');
         $("#plane").css('left', -value*0.5 + 'px');
         $("#title").css('top', -value*0.15 + 'px');
-        $("#city-two").css('top', value*0.15 + 'px');
-        $("#city-one").css('top', -value*0.05 + 'px');
+        $("#city-two").css('top', value*0.2 + 'px');
+        // $("#city-one").css('top', -value*0.1 + 'px');
     });
 });

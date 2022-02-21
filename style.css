@@ -225,7 +225,7 @@ section{
     height: 100vh;
     overflow: hidden;
 }
-section:before{
+/* section:before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -233,7 +233,7 @@ section:before{
     height: 100px;
     background: linear-gradient(to top, #000415, transparent);
     z-index: 10000;
-}
+} */
 
 .section-img{
     position: absolute;
