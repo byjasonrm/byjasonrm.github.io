@@ -35,9 +35,9 @@ $(document).ready(function(){
         }
 
         if(scroll > $(window).height()){
-            $("nav").addClass("nav-active");
+            // $("nav").addClass("nav-active");
         }else{
-            $("nav").removeClass("nav-active");
+            // $("nav").removeClass("nav-active");
         }
     });
 
