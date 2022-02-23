@@ -169,14 +169,7 @@ menu h3{
 }
 
 .book-information{
-    position:absolute;
-    bottom:0;
     color:#fff;
-    z-index:4;
-    left:50%;
-    transform: translateX(-50%);
-    width:70%;
-    background: linear-gradient(to top, #010415, transparent);
 }
 
 .book-information-content{
@@ -222,14 +215,48 @@ readanywhere{
 }
 
 .read-anywhere-content p{
-    margin:20px 0 0 0;
+    margin:20px 30px 0 0;
     font-weight:100;
     flex-grow: 1;
     font-size:20px;
 }
 
-.read-anywhere-content img{
-    width:400px;
+.read-anywhere-image{
+    position:relative;
+    overflow-y: hidden;
+    height:500px;
+    width:100%;
+    margin:30px 0;
+}
+
+.read-anywhere-image::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, #010415, transparent);
+    z-index: 10000;
+}
+
+.read-anywhere-image::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #010415, transparent);
+    z-index: 10000;
+}
+
+.read-anywhere-image-img{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    object-fit: contain;
+    transform: scale(1.5);
 }
 
 .read-anywhere-content .button-secondary{
@@ -497,8 +524,12 @@ buy{
 
 
 @media only screen and (max-width: 1200px) {
-    .book-information{
-        width:80%;
+
+}
+
+@media only screen and (max-width: 1130px) {
+    .read-anywhere-content{
+        flex-wrap: wrap;
     }
 }
 

@@ -26,6 +26,12 @@ $(document).ready(function(){
         $("#city-two").css('top', scroll*0.2 + 'px');
         // $("#city-one").css('top', -value*0.1 + 'px');
 
+        $("#phone-one").css('top', -scroll*0.05 + 'px');
+        $("#phone-two").css('top', -scroll*0.05 + 'px');
+        $("#phone-three").css('top', scroll*0.05 + 'px');
+        $("#phone-four").css('top', scroll*0.05 + 'px');
+
+
         if(scroll > $(window).height()/2){
             $(".hero-content").addClass("reveal-animation");
         }
