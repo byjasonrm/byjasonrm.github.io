@@ -24,20 +24,17 @@ $(document).ready(function(){
         $("#plane").css('left', -scroll*0.5 + 'px');
         $("#title").css('top', -scroll*0.15 + 'px');
         $("#city-two").css('top', scroll*0.2 + 'px');
-        // $("#city-one").css('top', -value*0.1 + 'px');
+        
 
-        $("#phone-one").css('top', -scroll*0.05 + 'px');
-        $("#phone-two").css('top', -scroll*0.05 + 'px');
-        $("#phone-three").css('top', scroll*0.05 + 'px');
-        $("#phone-four").css('top', scroll*0.05 + 'px');
-
+        $("#Phone-Front").css('bottom', -scroll*0.25 + 'px');
+        $("#Phone-Back").css('top', -scroll*0.15 + 'px');
 
         if(scroll > $(window).height()/2){
             $(".hero-content").addClass("reveal-animation");
         }
 
         if(scroll > ($(window).height()*2)/2){
-            $(".readfree-content").addClass("reveal-animation");
+            $(".read-anywhere-content").addClass("reveal-absolute");
         }
 
         if(scroll > $(window).height()){
