@@ -201,7 +201,7 @@ menu h3{
 
 
 .book-information-details-description{
-    font-weight:100;
+    font-weight:200;
 }
 
 .book-information-details-tags{
@@ -212,7 +212,7 @@ menu h3{
 .book-tag{
     font-size:14px;
     color:rgb(141, 141, 141);
-    font-weight:100;
+    font-weight:200;
     margin: 0 15px;
 }
 
@@ -268,7 +268,7 @@ readanywhere::after{
 
 .read-anywhere-content p{
     margin:20px auto 25px auto;
-    font-weight:100;
+    font-weight:200;
     flex-grow: 1;
     font-size:18px;
 }
@@ -400,7 +400,7 @@ hero::after{
 .hero-read-free{
     display:flex;
     flex-wrap: nowrap;
-    font-weight:100;
+    font-weight:200;
     position:absolute;
     bottom:0;
     padding:10px 30px;
@@ -587,7 +587,7 @@ badges::after{
 
 .badges-content p{
     margin:20px 0;
-    font-weight:100;
+    font-weight:200;
     font-size:18px;
 }
 
@@ -662,7 +662,7 @@ faq h2{
 }
 
 .question p{
-    font-weight:100;
+    font-weight:200;
     color:rgb(209, 209, 209);
 }
 
