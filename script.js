@@ -46,6 +46,8 @@ $(document).ready(function(){
         }else{
             // $("nav").removeClass("nav-active");
         }
+
+
     });
 
 

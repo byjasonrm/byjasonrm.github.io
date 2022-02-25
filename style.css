@@ -262,6 +262,10 @@ readanywhere::after{
     font-size:25px;
 }
 
+.read-anywhere-content h2 i{
+    vertical-align: middle;
+}
+
 .read-anywhere-content p{
     margin:20px auto 25px auto;
     font-weight:100;
@@ -568,9 +572,17 @@ badges::after{
 .badges-content{
     text-align: center;
     color:#fff;
-    padding:100px 0;
+    padding:100px 0 50px 0;
     width:40%;
     opacity:0;
+}
+
+.badges-content h2{
+    margin:25px 0 0px 0;
+}
+
+.badges-content h2 i{
+    vertical-align: middle;
 }
 
 .badges-content p{
@@ -594,6 +606,66 @@ badges::after{
     -ms-animation: animatedBackground 50s linear infinite;
     -o-animation: animatedBackground 50s linear infinite;
 }
+
+.badges-content .button-secondary i{
+    vertical-align: middle;
+    margin:0 0 0 5px;
+}
+
+.badges-content small{
+    border-radius:150px;
+    padding:5px 20px;
+    font-size:10px;
+}
+
+.active-badge{
+    border:1px solid green;
+    color:green;
+}
+
+faq{
+    width:100%;
+    padding:100px 0;
+    color:#fff;
+    display:block;
+}
+
+faq h2{
+    font-size:25px;
+    margin:0 0 50px 0;
+}
+
+.question{
+    margin:0px 0;
+    padding:20px 10px;
+    border-bottom:1px solid rgb(185, 185, 185);
+}
+
+.question h3{
+    margin:0 0 5px 0;
+}
+
+.question-title{
+    display:flex;
+}
+
+.question-icon{
+    flex-grow: 1;
+    text-align: right;
+    font-size:25px;
+    transition: all ease-in-out .5s;
+    transform: rotate(0deg);
+}
+
+.question-icon i{
+    transition: all ease-in-out .3s;
+}
+
+.question p{
+    font-weight:100;
+    color:rgb(209, 209, 209);
+}
+
 
 
 
