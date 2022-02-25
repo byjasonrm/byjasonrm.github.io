@@ -582,10 +582,10 @@ badges::after{
 .badges-strip{
     width:100%;
     margin:50px 0 0 0;
-    height:100px;
+    height:200px;
     background:url(/assets/images/badges/BadgesStrip.png);
     background-repeat: repeat-x;
-    background-size: contain;
+    background-size: cover;
     background-position: 0 0;
 
     animation: animatedBackground 50s linear infinite;
@@ -595,30 +595,11 @@ badges::after{
     -o-animation: animatedBackground 50s linear infinite;
 }
 
-.badges-strip-second{
-    width:100%;
-    height:100px;
-    background:url(/assets/images/badges/BadgesStrip.png);
-    background-repeat: repeat-x;
-    background-size: contain;
-    background-position: 0 0;
-
-    animation: animatedBackground2 50s linear infinite;
-    -moz-animation: animatedBackground2 50s linear infinite;
-    -webkit-animation: animatedBackground2 50s linear infinite;
-    -ms-animation: animatedBackground2 50s linear infinite;
-    -o-animation: animatedBackground2 50s linear infinite;
-}
 
 
 @keyframes animatedBackground {
     0% { background-position: 0 0; }
     100% { background-position: -1000px 0; }
-}
-
-@keyframes animatedBackground2 {
-    0% { background-position: 0 0; }
-    100% { background-position: 1000px 0; }
 }
   
   
@@ -683,6 +664,11 @@ badges::after{
 
     .badges-content{
         width:90%;
+    }
+
+    .badges-strip{
+        background-size: cover;
+        height:200px;
     }
 
 }
