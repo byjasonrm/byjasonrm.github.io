@@ -37,6 +37,10 @@ $(document).ready(function(){
             $(".read-anywhere-content").addClass("reveal-absolute");
         }
 
+        if(scroll > ($(window).height()*3)/2){
+            $(".badges-content").addClass("reveal-animation");
+        }
+
         if(scroll > $(window).height()){
             // $("nav").addClass("nav-active");
         }else{
