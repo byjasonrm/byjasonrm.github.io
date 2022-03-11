@@ -638,7 +638,7 @@ faq h2{
 .question{
     margin:0px 0;
     padding:20px 10px;
-    border-bottom:1px solid rgb(185, 185, 185);
+    border-bottom:1px solid rgba(97, 97, 97, 0.288);
 }
 
 .question h3{
@@ -664,6 +664,7 @@ faq h2{
 .question p{
     font-weight:200;
     color:rgb(209, 209, 209);
+    padding:0 0 0 20px;
 }
 
 
