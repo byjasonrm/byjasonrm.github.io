@@ -6,6 +6,7 @@
     --main-type:'Inter', sans-serif;
     --secondary-type:"Questrial";
     --cover:rgba(0, 0, 0, 0.8);
+    --accent-color:#010415;
 }
 
 *{
@@ -16,7 +17,7 @@
 }
 
 body{
-    background:#010415;
+    background:var(--accent-color);
 }
 
 .max-width{
@@ -175,6 +176,11 @@ menu h3{
     padding:30px;
 }
 
+.menu-content a,
+.nav-content a{
+    text-decoration: none;
+}
+
 .book-information{
     color:#fff;
     padding: 20px 0 0 0;
@@ -307,7 +313,7 @@ readanywhere::after{
 hero{
     display:block;
     width:100%;
-    background:#010415;
+    background:var(--accent-color);
     background:url(/assets/images/background.png) center center no-repeat;
     background-size:cover;
     position: relative;
@@ -320,7 +326,7 @@ hero::after{
     top: 0;
     width: 100%;
     height: 300px;
-    background: linear-gradient(to bottom, #010415, transparent);
+    background: linear-gradient(to bottom, var(--accent-color), transparent);
     z-index: 10000;
 }
 
@@ -404,7 +410,7 @@ hero::after{
     position:absolute;
     bottom:0;
     padding:10px 30px;
-    background:#010415;
+    background:var(--accent-color);
     border-radius: 10px 10px 0 0;
     color:#fff;
     font-size:14px;
@@ -421,7 +427,7 @@ hero::after{
 readfree{
     display:block;
     width:100%;
-    background:#010415;
+    background:var(--accent-color);
     color:#fff;
     border-top:1px solid rgba(255, 255, 255, 0.411);
 }
@@ -531,7 +537,7 @@ buy{
 .buy-book:hover{
     cursor:pointer;
     background:#fff;
-    color:#010415;
+    color:var(--accent-color);
 }
 
 #main{
@@ -665,6 +671,10 @@ faq h2{
     font-weight:200;
     color:rgb(209, 209, 209);
     padding:0 0 0 20px;
+}
+
+faq a{
+    color:#c0c0c0;
 }
 
 
