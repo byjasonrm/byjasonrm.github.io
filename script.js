@@ -41,11 +41,11 @@ $(document).ready(function(){
             $(".badges-content").addClass("reveal-animation");
         }
 
-        if(scroll > $(window).height()){
-            $("nav").addClass("nav-active");
-        }else{
-            $("nav").removeClass("nav-active");
-        }
+        // if(scroll > $(window).height()){
+        //     $("nav").addClass("nav-active");
+        // }else{
+        //     $("nav").removeClass("nav-active");
+        // }
 
 
     });
