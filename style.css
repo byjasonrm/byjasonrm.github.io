@@ -290,7 +290,7 @@ readanywhere::after{
 }
 
 #Phone-Front{
-    z-index:3;
+    z-index:-1;
     bottom:-300px;
     right:0;
     width:40%;
