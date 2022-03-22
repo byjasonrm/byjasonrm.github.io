@@ -1,17 +1,83 @@
+.max-width{
+    max-width:700px;
+}
+
+body{
+    background:url(../assets/images/stars.svg) center center repeat, var(--accent-color);
+    background-size: contain;
+}
+
+.announcement{
+    padding:30px;
+    text-align: center;
+    width: 100%;
+    background:#fff;
+    color:var(--accent-color);
+}
+
+.go-back{
+    padding:20px;
+    color:#fff;
+    font-size:15px;
+}
+
+.go-back a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.start{
+    color:#fff;
+    padding:100px 0;
+}
+
+.start h1{
+    font-size:35px;
+    line-height:2.2rem;
+    margin:0 0 20px 0;
+}
+
+.start p{
+    opacity:.8;
+    font-weight:300;
+}
+
+h2{
+    color:#fff;
+    font-size:18px;
+    font-weight:200;
+    opacity:.9;
+    text-align: center;
+}
+
+.winner{
+    display:flex;
+    align-items: center;
+    padding:50px 0;
+    border-bottom:1px solid rgba(255, 255, 255, 0.05);
+}
+
 .winner-name{
     color:#fff;
     font-weight:900;
     font-size:20px;
-    text-align: center;
-    margin:50px 0 0 0;
+    text-align: left;
+    width:100%;
 }
 
 .winner-badges{
-    text-align: center;
+    text-align: right;
 }
 
 .badge{
     display:inline-block;
-    width:70px;
-    height:70px;
+    width:50px;
+    height:50px;
+}
+
+@media only screen and (max-width: 800px) {
+    .winner-name{
+        
+    }
+
 }
