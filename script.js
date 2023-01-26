@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    let p = $("<span>Buy <span class='new-price'>4.99$</span> <span class='old-price'>9.99$</span></span>");
+
     if($(window).height() >= $(window).width()){
         MobileImages();
     }else{
@@ -16,14 +18,16 @@ $(document).ready(function(){
         $("menu").removeClass("show-menu");
     });
 
+    $(".button-buy").text('')
+    $(".button-buy").append(p)
 
     $(window).scroll(function(){
         let scroll = $(window).scrollTop();
 
-        $("#stars").css('top', -scroll*0.5 + 'px');
-        $("#plane").css('left', -scroll*0.5 + 'px');
-        $("#title").css('top', -scroll*0.15 + 'px');
-        $("#city-two").css('top', scroll*0.2 + 'px');
+        // $("#couple").css('top', -scroll*0.5 + 'px');
+        // $("#waveone").css('left', -scroll*0.5 + 'px');
+        // $("#wavetwo").css('top', -scroll*0.15 + 'px');
+        // $("#wavethree").css('top', scroll*0.2 + 'px');
         
 
         $("#Phone-Front").css('bottom', -scroll*0.25 + 'px');
@@ -65,20 +69,16 @@ $(document).ready(function(){
 
 function MobileImages(){
     $("#bg").attr("src","/assets/images/cover/bg.svg");
-    $("#stars").attr("src","/assets/images/cover/stars.png");
-    $("#plane").attr("src","/assets/images/cover/plane.svg");
-    $("#city-two").attr("src","/assets/images/cover/city-two.svg");
-    $("#city-one").attr("src","/assets/images/cover/city-one.svg");
-    $("#main").attr("src","/assets/images/cover/main.svg");
-    $("#title").attr("src","/assets/images/cover/title.png");
+    $("#couple").attr("src","/assets/images/cover/couple.svg");
+    $("#waveone").attr("src","/assets/images/cover/waveone.svg");
+    $("#wavetwo").attr("src","/assets/images/cover/wavetwo.svg");
+    $("#wavethree").attr("src","/assets/images/cover/wavethree.svg");
 }
 
 function DesktopImages(){
     $("#bg").attr("src","/assets/images/cover/horizontal/bg.svg");
-    $("#stars").attr("src","/assets/images/cover/horizontal/stars.png");
-    $("#plane").attr("src","/assets/images/cover/horizontal/plane.svg");
-    $("#city-two").attr("src","/assets/images/cover/horizontal/city-two.svg");
-    $("#city-one").attr("src","/assets/images/cover/horizontal/city-one.svg");
-    $("#main").attr("src","/assets/images/cover/horizontal/main.svg");
-    $("#title").attr("src","/assets/images/cover/horizontal/title.png");
+    $("#couple").attr("src","/assets/images/cover/horizontal/couple.svg");
+    $("#waveone").attr("src","/assets/images/cover/horizontal/waveone.svg");
+    $("#wavetwo").attr("src","/assets/images/cover/horizontal/wavetwo.svg");
+    $("#wavethree").attr("src","/assets/images/cover/horizontal/wavethree.svg");
 }

@@ -46,10 +46,32 @@ body{
     box-shadow: 0px -1px 23px -2px rgba(15,110,255,0.75);
     -webkit-box-shadow: 0px -1px 23px -2px rgba(15,110,255,0.75);
     -moz-box-shadow: 0px -1px 23px -2px rgba(15,110,255,0.75);
+    position:relative;
 }
 
 .button-primary:hover{
     cursor:pointer;
+}
+
+.button-buy::after{
+    content:'🦢 50% Off';
+    font-weight:bold;
+    background:rgb(11, 3, 50);
+    background: linear-gradient(45deg,#F17C58, #E94584, #24AADB);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+    position:absolute;
+    top:-50%;
+    right:-5%;
+    padding:3px 10px;
+    border-radius:200px;
+    
+}
+
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
 }
 
 .button-secondary{
@@ -67,11 +89,34 @@ body{
 
 
 
+
+
+
+.announcement{
+    background:#ffccbd;
+    background: linear-gradient(45deg,#24AADB, #24db79);
+    background-size: 600% 100%;
+    animation: gradient 10s linear infinite;
+    animation-direction: alternate;
+    text-align: center;
+    padding:20px 10px;
+    font-weight:bold;
+}
+
+/* .vc{
+    background: linear-gradient(45deg,#ffccbd, #eb93b5);
+} */
+
+
+
+
+
+
 nav{
     width:100%;
     color:#fff;
     padding:30px 0;
-    position: fixed;
+    position: absolute;
     z-index:5;
     transition: all ease-in-out .3s;
 }
@@ -247,8 +292,8 @@ menu h3{
     width:100%;
     padding:25vh 0;
     height:auto;
-    background:url(/assets/images/cover/horizontal/star-desktop.svg) center center no-repeat;
-    background-size:cover;
+    background:url(/assets/images/cover/horizontal/wavethree.svg) center center no-repeat;
+    background-size:contain;
 }
 
 .creds-container{
@@ -322,6 +367,15 @@ menu h3{
 
 
 
+.button-buy{
+    font-weight:bold;
+}
+
+.old-price{
+    text-decoration:line-through;
+    opacity:0.5;
+    font-weight: lighter;
+}
 
 
 
@@ -754,6 +808,9 @@ badges::after{
 
 
 
+
+
+
 .newsletter{
     color:var(--color-100);
     padding:50px 0;
@@ -779,6 +836,15 @@ badges::after{
 .newsletter a{
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
 
 
 
