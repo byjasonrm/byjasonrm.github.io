@@ -54,10 +54,10 @@ body{
 }
 
 .button-buy::after{
-    content:'🦢 50% Off';
+    content:'🤍 30% Off';
     font-weight:bold;
     background:rgb(11, 3, 50);
-    background: linear-gradient(45deg,#F17C58, #E94584, #24AADB);
+    background: #E94584;
     background-size: 600% 100%;
     animation: gradient 16s linear infinite;
     animation-direction: alternate;
@@ -93,8 +93,8 @@ body{
 
 
 .announcement{
-    background:#ffccbd;
-    background: linear-gradient(45deg,#24AADB, #24db79);
+    /* background:#ffccbd; */
+    background: #E94584;
     background-size: 600% 100%;
     animation: gradient 10s linear infinite;
     animation-direction: alternate;
