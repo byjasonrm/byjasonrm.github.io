@@ -53,7 +53,7 @@ body{
     cursor:pointer;
 }
 
-.button-buy::after{
+/* .button-buy::after{
     content:'🤍 30% Off';
     font-weight:bold;
     background:rgb(11, 3, 50);
@@ -67,7 +67,7 @@ body{
     padding:3px 10px;
     border-radius:200px;
     
-}
+} */
 
 @keyframes gradient {
     0% {background-position: 0%}
@@ -101,6 +101,11 @@ body{
     text-align: center;
     padding:20px 10px;
     font-weight:bold;
+}
+
+a .announcement{
+    color: #000;
+    text-decoration: none;
 }
 
 /* .vc{

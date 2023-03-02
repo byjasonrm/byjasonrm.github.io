@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    let p = $("<span>Buy <span class='new-price'>6.99$</span> <span class='old-price'>9.99$</span></span>");
+    let p = $("<span>Buy <span class='new-price'>9.99$</span></span>");
 
     if($(window).height() >= $(window).width()){
         MobileImages();
