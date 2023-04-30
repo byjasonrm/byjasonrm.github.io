@@ -1,0 +1,65 @@
+.books-content{
+  display:flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+.books-content-box{
+    display:flex;
+    align-items: center;
+    margin:0 auto;
+    padding:50px;
+}
+.books-content-box-cover img{
+    width:200px;
+    /* border:1px solid #636363; */
+}
+.books-content-box-details{
+    color:#fff;
+    padding:0 30px;
+    max-width: 400px;
+}
+.books-content-box-details-highlight{
+    opacity:0.8;
+}
+.books-content-box-details-action{
+    padding:20px 0;
+}
+
+.books-action-button{
+    margin:10px 0 0 0;
+    font-weight:500;
+    padding:10px 20px;
+    border-radius: 100px;
+    background:transparent;
+    display:inline-block;
+}
+
+.books-content-box-details-action-learn-more{
+    border:1px solid #fff;
+    color:#fff;
+}
+.books-content-box-details-action-buy-now{
+    cursor:pointer;
+    background:#0071e3;
+    color:#fff;
+}
+.books-content-box-details-info{
+    opacity:0.5;
+    font-size:12px;
+    margin:5px 0 0 0;
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width: 800px) {
+    .books-content-box{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .books-content-box-details{
+        padding:0 10px;
+    }
+    .books-action-button{
+        display:block;
+    }
+}
