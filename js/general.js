@@ -1,6 +1,6 @@
-export const views = "24.1M+"
-export const supporters = "65.2K+"
-export const likes = "3.5M+"
+export const views = "27.8M+"
+export const supporters = "70.5K+"
+export const likes = "4.1M+"
 
 export function creds(){
     $(".cred-views").text(views)
