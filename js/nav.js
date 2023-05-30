@@ -21,7 +21,7 @@ const navlinks = [
         icon:`<i class="ph ph-crown-simple"></i>`,
         navClass:'nav-club',
         menuClass:'menu-club',
-        specialStyle:''
+        specialStyle:'diamond-shine'
     },
 ]
 

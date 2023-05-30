@@ -1,0 +1,31 @@
+{
+    "short_name": "Jason R. M.",
+    "name": "Jason R. M.",
+    "description": "Jason R. M.",
+    "icons": [
+      {
+        "src": "assets/icons/launcher-1.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "assets/icons/launcher-2.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "assets/icons/launcher-3.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "assets/icons/launcher-4.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "./?mode=standalone",
+    "background_color": "#131313",
+    "theme_color": "#131313",
+    "display": "standalone"
+  }

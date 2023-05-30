@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="read/read.css">
+    <link rel="stylesheet" href="read/style.css">
+    <!-- <link rel="stylesheet" href="book.css"> -->
+    <title>JRM Reader</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V79F4603MX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-V79F4603MX');
+    </script>
+    
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3308565,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K7LFP8Q');</script>
+    
+    
+</head>
+<body class="">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7LFP8Q"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   
+    
+    <nav>
+        <div class="go-home">
+            <a href="books.html" class="secondary-action">
+                <i class="ph ph-arrow-left go-home-text"></i> <span class="">Books</span></a>
+        </div>
+
+        <a href="index.html" class="logo"> <span class="logo-full">Jason R. M.</span> <span class="logo-small">Jason R.M.</span></a>
+        <div class="buy-option">
+            <a href="" class="buy-book primary-action display-none">
+                <span class="buy-book-text">Buy</span>
+                <span class="buy-book-price"></span>
+            </a>
+            <div class="full-book display-none">Full Free Read</div>
+        </div>
+    </nav>
+
+    <div class="bubble-load-container hide-bubble-load">
+        <div class="bubble"></div>
+        <div class="shadow"></div>
+    </div>
+
+    <div class="tap-cover display-none"></div>
+
+    <div class="content-container">
+
+        <h1 id="title" class="sans-serif-font"></h1>
+        <h2 id="subtitle" class="sans-serif-font"></h2>
+        <pre id="displayArea" class="sans-serif-font"></pre>
+        <input type="text" value="" id="shareLink" style="display:none">
+        <div class="share-page-container">
+            <button class="share-page sans-serif-font"><i class="ph ph-link"></i>  Share this page
+            <div class="copied-text">Copied Link <i class="ph ph-confetti"></i></div>
+            </button>
+            
+        </div>
+        <small class="error-copy-text display-none">Couldn't copy the link, please try again later.</small>
+    </div>
+
+    <div class="settings-container popup-container hide-popup-container">
+
+        <div class="settings-section settings-kitty popup-container-section popup-container-section-border">
+            <h4><i class="ph ph-cat"></i> Kitty Settings</h4>
+
+            <div class="popup-container-section-box">
+                <div>Give Kitty a Name</div>
+                <input type="text" class="input-kitty-name" placeholder="Type the kitty name here...">
+                <small>Simply type the name and it will auto-save. Max number of characters possible is 30.</small>
+                <small class="alert-text display-none">Maximum character limit exceeded.</small>
+            </div>
+
+            <div class="popup-container-section-box">
+                <button class="toggle-kitty">Hide Kitty</button>
+            </div>
+
+        </div>
+
+        <div class="settings-section settings-font-size popup-container-section popup-container-section-border">
+
+            <h4><i class="ph ph-text-aa"></i> Change Font Size</h4>
+            <button class="decrease-font-size"><i class="ph ph-minus"></i> Decrease Font Size</button>
+            <button class="increase-font-size"><i class="ph ph-plus"></i> Increase Font Size</button>
+        </div>
+
+        <div class="settings-section settings-font-type popup-container-section popup-container-section-border">
+
+            <h4><i class="ph ph-text-italic"></i> Change Font Type</h4>
+
+            <button class="settings-serif"><i class="ph ph-text-t"></i> Serif Font</button>
+            <button class="settings-sans-serif"><i class="ph ph-text-b"></i> Sans Serif Font</button>
+        </div>
+
+        <div class="settings-section settings-theme popup-container-section">
+            <h4><i class="ph ph-cloud-moon"></i> Change Mode</h4>
+
+            <button class="activate-light-mode"><i class="ph ph-sun"></i> Light Mode</button>
+            <button class="activate-dark-mode"><i class="ph ph-moon"></i> Dark Mode</button>
+        </div>
+    </div>
+
+    <div class="chapters-container popup-container popup-container-section hide-popup-container">
+
+    </div>
+
+    <div class="utility-belt">
+        <button class="chapters button-toggle-off"><i class="ph ph-list-bullets"></i></button>
+        <button class="previous-page"><i class="ph ph-caret-left"></i></button>
+        <button class="next-page"><i class="ph ph-caret-right"></i></button>
+
+        <button class="settings button-toggle-off"><i class="ph ph-sliders-horizontal"></i></button>
+    </div>
+
+
+
+    <div class="invisible"></div>
+
+
+
+
+
+    <!-- Canvas -->
+    <canvas id="gameCanvas" width="800" height="100"></canvas>
+    <script>
+        var canvas = document.getElementById('gameCanvas');
+        var ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth * 2;
+
+        var walkRightImg = new Image();
+        var walkLeftImg = new Image();
+        var sitImg = new Image();
+
+        walkRightImg.src = "/read/kittywalk_right.png";
+        walkLeftImg.src = "/read/kittywalk_left.png";
+        sitImg.src = "/read/kittysit.png";
+
+        var kitty = {
+            x: 0,
+            y: 0,
+            width: 30,
+            height: 30,
+            speed: 0.5,
+            direction: 'right',
+            sitting: false,
+        };
+
+        function drawKitty() {
+            var img;
+            if (kitty.sitting) {
+                img = sitImg;
+            } else {
+                img = (kitty.direction === 'right') ? walkRightImg : walkLeftImg;
+            }
+            ctx.drawImage(img, kitty.x, kitty.y, kitty.width, kitty.height);
+        }
+
+        function moveKitty() {
+            if (kitty.sitting) return;
+
+            if (kitty.direction === 'right') kitty.x += kitty.speed;
+            else if (kitty.direction === 'left') kitty.x -= kitty.speed;
+
+            if (kitty.x + kitty.width > canvas.width) kitty.direction = 'left';
+            else if (kitty.x < 0) kitty.direction = 'right';
+        }
+
+        function sitKitty(event) {
+            var rect = canvas.getBoundingClientRect();
+            var x = event.clientX - rect.left;
+            var y = event.clientY - rect.top;
+
+            if (
+                x >= kitty.x && x <= kitty.x + kitty.width &&
+                y >= kitty.y && y <= kitty.y + kitty.height
+            ) {
+                kitty.sitting = true;
+                setTimeout(function() {
+                    kitty.sitting = false;
+                }, 2000);
+            }
+        }
+
+        function gameLoop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            moveKitty();
+            drawKitty();
+            requestAnimationFrame(gameLoop);
+        }
+
+        canvas.addEventListener('click', sitKitty);
+        gameLoop();
+
+        window.addEventListener('resize', function() {
+            canvas.width = window.innerWidth * 2;
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/data/bdcs.js"></script>
+    <script src="/data/ltwns.js"></script>
+    <script src="/data/utss.js"></script>
+    <script type="module" src="read/read.js"></script>
+
+</body>
+</html>

@@ -13,7 +13,7 @@
     <link rel="shortcut icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
+    <link rel="manifest" href="/manifest.webmanifest">
     <title>Jason R. M. | Author & Poet</title>
 
 
@@ -66,15 +66,31 @@
     <nav>
     </nav>
 
+    <section class="full-section max-width continue-reading display-none">
+        <div class="carousel">
+            <button id="prev" class="carousel-slide-button"><i class="ph ph-caret-left"></i></button>
+            <button id="next" class="carousel-slide-button"><i class="ph ph-caret-right"></i></button>
+            <div class="slides-wrapper">
+                <div class="slides">
+
+                </div>
+            </div>
+        </div>
+
+
+        
+    
+    </section>
+
 
     <section class="main-book max-width full-section">
-        <div class="main-book-shader"></div>
+        <!-- <div class="main-book-shader"></div> -->
         <div class="section-content">
             <div class="section-title"><img src=""></div>
             <div class="section-description"></div>
             <div class="section-action">
-                <a href="" class="action-button primary-action-button"> Buy <span class="main-book-price"></span>$ <i class="ph ph-arrow-right"></i> </a>
-                <a href="club.html?ac=readfree" class="action-button secondary-action-button"> Read free version <i class="ph ph-arrow-right"></i> </a>
+                <a href="" class="action-button primary-action-button"> Read free version <i class="ph ph-arrow-right"></i> </a>
+                <a href="" class="action-button secondary-action-button"> Learn more <i class="ph ph-arrow-right"></i> </a>
 
             </div>
 
@@ -85,9 +101,8 @@
                 <a href="club.html"><span class="quicklink">  See Membership Benefits <i class="ph ph-arrow-right"></i></span></a>  
             </div>
         </div> 
-
-        <div class="reviews">
-
+        <div class="section-image">
+            <img src="" alt="">
         </div>
     </section>
 
@@ -113,11 +128,68 @@
 
 
     <div class="double-box-container max-width">
+        <section class="club half-section">
+            <div class="section-content">
+                <div class="section-title diamond-shine"><img src="/assets/icons/royals/diamondroyal.svg" alt="Diamond Royal"> Join The Club</div>
+                <div class="section-description">
+                    Become part of the community and get all the benefits and perks.
+                    <br><br>
+                    <i class="ph ph-check-circle"></i> Direct Message
+                    <br>
+                    <i class="ph ph-check-circle"></i> Free Digital Products
+                    <br>
+                    <i class="ph ph-check-circle"></i> Extra Chapters & Poems
+                    <br><br>
+                    Starting 0.99$ / mo
+                </div>
+                <div class="section-action">
+                    <a href="club.html" class="action-button primary-action-button"> 
+                        Check Memberships <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="section-small"> 
+                    Poetry is for Royals.
+                </div>
+            </div>
+             
+            <div class="section-image">
+                <img src="/assets/images/club.png" alt="Club Image">
+            </div>
+        </section> 
+
+        <section class="half-section">
+            <div class="section-content">
+                <div class="section-title"><i class="ph ph-book-open-text"></i> Read my books</div>
+                <div class="section-description">You can read my books right here with the new reader experience.
+                <br><br>
+                <i class="ph ph-check-circle"></i> Light & Dark Mode
+                <br>
+                <i class="ph ph-check-circle"></i> Auto-saves your settings
+                <br>
+                <i class="ph ph-check-circle"></i> Designed for your reading comfort
+                <br><br>
+                For free.
+            </div>
+                <div class="section-action">
+                    <a href="books.html" class="action-button primary-action-button">Check Books <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <div class="section-small"> 
+                    Dive into the pages.
+                </div>
+            </div> 
+            <div class="section-image">
+                <img src="/assets/images/readmybooks.png" alt="Read My Books Image">
+            </div>
+        </section>
+    </div>
+
+
+    <div class="double-box-container max-width">
         <section class="yt half-section">
             <div class="section-content">
-                <div class="section-title">Now on YouTube</div>
+                <div class="section-title"><i class="ph ph-youtube-logo"></i> Now on YouTube</div>
                 <div class="section-description">
-                    My poems are now available to watch and listen on YouTube completely for free.
+                    My poems are now available to watch and listen on YouTube.
                 </div>
                 <div class="section-action">
                     <a href="https://bit.ly/3L3jRw8" target="_blank" class="action-button primary-action-button"> 
@@ -130,14 +202,14 @@
             </div>
              
             <div class="section-image">
-                
+                <img src="/assets/images/yt.png" alt="Youtube Image">
             </div>
         </section> 
 
         <section class="shop half-section">
             <div class="section-content">
-                <div class="section-title">The Digital Shop</div>
-                <div class="section-description">Visit the shop to get stunning wallpapers for your setup and frame your favorite quotes.</div>
+                <div class="section-title"><i class="ph ph-shopping-cart"></i> The Digital Shop</div>
+                <div class="section-description">Visit the shop to get stunning wallpapers and frame your favorite quotes.</div>
                 <div class="section-action">
                     <a href="https://bit.ly/3JxfO8c" class="action-button primary-action-button">Visit Shop <i class="ph ph-arrow-right"></i></a>
                 </div>
@@ -146,7 +218,7 @@
                 </div>
             </div> 
             <div class="section-image">
-                
+                <img src="/assets/images/shop.png" alt="Shop Image">
             </div>
         </section>
     </div>
@@ -175,5 +247,16 @@
     <script type="module" src="script.js"></script>
     <script src="/js/nav.js"></script>
     <script src="/js/footer.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (reg) {
+                    console.log('sw av')
+                }).catch(function (err) {
+                    console.log("Err:", err)
+                });
+        }
+    </script>
 </body>
 </html>

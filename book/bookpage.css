@@ -6,8 +6,6 @@ body{
     background:url(/assets/images/utss/utss-bg.svg) center center / contain repeat, #000;
 }
 
-  
-
 
 
 
@@ -156,7 +154,7 @@ body{
 
 
 .bookreviews-content{
-    padding:0vh 0 10vh 0;
+    padding:10vh 0 10vh 0;
     text-align: center;
 
 }
@@ -290,9 +288,7 @@ justify-content: center;
     .book-information-ctas .buy-book-button{
         display:none;
     }
-    .read-now-content .action-button{
-        display: none;
-    }
+
 
     .book-information{
         padding:3vh 0;

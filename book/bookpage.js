@@ -1,1 +1,55 @@
-import*as e from"../js/books.js";import*as o from"../js/general.js";let queryString=window.location.search,urlParams=new URLSearchParams(queryString),book=urlParams.get("id");function setupbook(e){$(".book-price").text(e.price),$(".buy-book-button").attr("href",e.buy_link),$(".book-information-details-title-logo").attr("src",e.title_logo),$(".book-information-details-title-cover").attr("src",e.cover_book),$(".description-text").text(e.description),$(".tag-date").text(e.release_date),$(".tag-genres").text(e.genres),$(".tag-language").text(e.language),$(".tag-words").text(e.words),$(".tag-pages").text(e.pages),$(".circle-1").css("background",e.brandColor),$(".circle-2").css("background",e.brandColor),$("body").css("background","url("+e.pageBG+") center center / contain repeat, "+e.bgColor);for(let o=0;o<e.reviews.length;o++){let t=$("<span class='bookreview book-information-details-description' style='animation-delay: "+.3*o+"s'>"+e.reviews[o]+"</span>");$(".bookreviews-content-container").append(t)}}o.creds(),$(document).ready(function(){if(""==book||void 0==book||null==book)window.location.href="./404.html";else{let o=e.list.find(e=>e.id==book);o?setupbook(o):window.location.href="./404.html"}$(window).scroll(function(){let e=$(window).scrollTop();e>$(window).height()+$(".creds").height()&&$(".bookreview").addClass("appear-animation"),e>$(window).height()/2&&$("readanywhere .book-information-details-description").addClass("appear-animation")})});
+import * as Books from '../js/books.js'
+import * as General from '../js/general.js'
+
+const queryString = window.location.search
+const urlParams = new URLSearchParams(queryString)
+const book = urlParams.get('id')
+
+
+General.creds()
+
+$(document).ready(function(){
+    if(book == '' || book == undefined || book == null){
+        window.location.href = './404.html'
+    }else{
+        let bookfound = Books.list.find(x => x.id == book)
+        if(bookfound){
+            setupbook(bookfound)
+        }else{
+            window.location.href = './404.html'
+        }
+    }
+    
+    $(window).scroll(function(){
+        let scroll = $(window).scrollTop();
+
+        if(scroll > ($(window).height() + $('.creds').height())){
+            $(".bookreview").addClass("appear-animation")
+        }
+        if(scroll > ($(window).height() / 2)){
+            $("readanywhere .book-information-details-description").addClass("appear-animation")
+        }
+    })
+})
+
+function setupbook(b){
+    $(".buy-book-button").attr("href", "/read.html?id="+b.id)
+    
+    $(".read-free-version-button").attr("href", "/read.html?id="+b.id)
+    $(".book-information-details-title-logo").attr("src", b.title_logo)
+    $(".book-information-details-title-cover").attr("src", b.cover_book)
+    $(".description-text").text(b.description)
+    $(".tag-date").text(b.release_date)
+    $(".tag-genres").text(b.genres)
+    $(".tag-language").text(b.language)
+    $(".tag-words").text(b.words)
+    $(".tag-pages").text(b.pages)
+    $(".circle-1").css("background", b.brandColor)
+    $(".circle-2").css("background", b.brandColor)
+    $("body").css("background", "url(" + b.pageBG + ") center center / contain repeat, " +  b.bgColor +"")
+    
+    for(let i=0; i<b.reviews.length; i++){
+        let $r = $("<span class='bookreview book-information-details-description' style='animation-delay: " + i*0.3 + "s'>" + b.reviews[i] + "</span>")
+        $(".bookreviews-content-container").append($r)
+    }
+}

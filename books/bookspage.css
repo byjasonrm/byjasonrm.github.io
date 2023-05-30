@@ -8,21 +8,23 @@
     align-items: center;
     margin:0 auto;
     padding:50px;
+    
 }
 .books-content-box-cover img{
     width:200px;
-    /* border:1px solid #636363; */
 }
 .books-content-box-details{
     color:#fff;
     padding:0 30px;
     max-width: 400px;
 }
+.books-content-box-details-title{
+    padding:20px 0;
+    font-weight:300;
+}
 .books-content-box-details-highlight{
     opacity:0.8;
-}
-.books-content-box-details-action{
-    padding:20px 0;
+    padding:0 0 20px 0;
 }
 
 .books-action-button{
@@ -50,16 +52,27 @@
     text-transform: capitalize;
 }
 
+@media only screen and (max-width: 1350px) {
+    .books-content-box{
+        width: 100%;
+    }
+}
 @media only screen and (max-width: 800px) {
     .books-content-box{
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
+        max-width: 50%;
     }
     .books-content-box-details{
         padding:0 10px;
     }
     .books-action-button{
         display:block;
+    }
+}
+@media only screen and (max-width: 620px) {
+    .books-content-box{
+        max-width: 90%;
     }
 }
