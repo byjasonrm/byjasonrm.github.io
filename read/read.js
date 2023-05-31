@@ -19,8 +19,6 @@ checkLocal()
 
 $(document).ready(function(){
 
-    configurePage(bookid, currentPage)
-
     fillChapters()
     buildPage()
 
@@ -326,7 +324,7 @@ function disableStatus(){
 
 function fillChapters(){
     let list = groupByChapter(book.chapter, book.page)
-    console.log(list)
+
     for(let i=0; i < list.length; i++){
         let $chapter = $(`<div class="chapter-title"> ${ list[i].chapterTitle} </div>`)
         let $li;
@@ -354,32 +352,6 @@ function groupByChapter(chapterList, otherList) {
     });
 }
 
-function configurePage(n, p){
-    if(n == '' || n == undefined || n == null){
-        window.location.href = './404.html'
-        // alert("not found")
-    }else{
-        if(n == "ltwns"){
-            book = ltwns
-            totalpages = ltwns.page.length - 1
-            Storage.updateTotalPages(n, totalpages)
-        }else if(n == "bdcs"){
-            book = bdcs
-            totalpages = bdcs.page.length - 1
-            Storage.updateTotalPages(n, totalpages)
-        }else if(n == "utss"){
-            book = utss
-            totalpages = utss.page.length - 1
-            Storage.updateTotalPages(n, totalpages)
-        }
-        if(p && p >=0 && p < book.page.length){
-            goToChapter(p)
-        }
-    }
-
-}
-
-
 
 
 function checkLocal(){
@@ -394,7 +366,6 @@ function checkLocal(){
 }
 
 function newLocalData(){
-    console.log("creating new user")
     Storage.createUserID()
     Storage.AddToLocalStorage()
     Storage.addBook(bookid, totalpages)
@@ -419,13 +390,14 @@ function setUpLocal(){
     let found = Storage.user.bookAndPage.find(x => x.bid == bookid)
 
     if (found) {
-        setUpPage(found)
+        configurePage(bookid, found)
     }else{
         Storage.addBook(bookid, totalpages)
         let found = Storage.user.bookAndPage.find(x => x.bid == bookid)
-        setUpPage(found)
+        configurePage(bookid, found)
     }
-    
+
+
     
     if(Storage.user.currentMode == ""){
         changeToLightMode()
@@ -450,11 +422,48 @@ function setUpLocal(){
 
 }
 
-function setUpPage(found){
-    if (pagenbr) {
-        Storage.updateCurrentPage(parseInt(pagenbr))
-        currentPage = found.pnb
+function configurePage(n, p){
+    if(n == '' || n == undefined || n == null){
+        window.location.href = './404.html'
     }else{
-        currentPage = found.pnb
+        if(n == "ltwns"){
+            book = ltwns
+            totalpages = ltwns.page.length - 1
+            Storage.updateTotalPages(n, totalpages)
+        }else if(n == "bdcs"){
+            book = bdcs
+            totalpages = bdcs.page.length - 1
+            Storage.updateTotalPages(n, totalpages)
+        }else if(n == "utss"){
+            book = utss
+            totalpages = utss.page.length - 1
+            Storage.updateTotalPages(n, totalpages)
+        }
+
+        setUpPage(p)
+
+
     }
+
+}
+
+function setUpPage(p){
+    if(p.pnb && p.pnb >=0){
+        if(p.pnb > book.page.length){
+            Storage.updateCurrentPage(0)
+            currentPage = 0
+        }else{
+            if (pagenbr) {
+                Storage.updateCurrentPage(parseInt(pagenbr))
+                currentPage = pagenbr
+            }else{
+                currentPage = p.pnb
+            }
+        }        
+    }else{
+        Storage.updateCurrentPage(0)
+        currentPage = 0
+    }
+
+    
 }

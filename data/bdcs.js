@@ -12,29 +12,28 @@ var bdcs = {
     ],
     page: [
         {
-        chapter_id:"B",
-        id:"1",
-        title: "Sleep",
-        subtitle: "June 10, 2017",
-        content: `
-        Sleep, endlessly on the shores
-        Of white sand and calm sea
-        Sleep, on a bed of warmth
-        As peaceful as one can be
-        
-        Sleep, and if bad dreams occur
-        You haven’t reached the peak 
-        Sleep, dream of the stars
-        The rivers and the wood creak
-        
-        Sleep, leave everything behind
-        Part the skies and be free
-        Sleep, and I will sleep next to you
-        For our world is no longer here
-        And soon, I will be next to you,
-        Sleeping a slumber so deep…
-        `
-    }, 
+            chapter_id:"B",
+            id:"4",
+            title: "Memory / Last Dance",
+            subtitle: "July 01, 2017",
+            content: `
+            …And yet,
+            Your heart intertwined with mine,
+            Dancing like we have infinite time
+            What is this feeling?
+            A unique type of healing
+            A love… divine
+            
+            I want to be here forever
+            I want to hold you near, whenever
+            Bless me with your smile
+            And never let go, ever
+            
+            I know this dance will end,
+            I know this is temporary…
+            `
+        },
+
         {
             chapter_id:"B",
             id:"2",
@@ -109,100 +108,7 @@ var bdcs = {
         But I learned nothing except hate
         And fill my words with atrocious lies…
         `
-    }, {
-        chapter_id:"B",
-        id:"4",
-        title: "Memory / Last Dance",
-        subtitle: "July 01, 2017",
-        content: `
-        …And yet,
-        Your heart intertwined with mine,
-        Dancing like we have infinite time
-        What is this feeling?
-        A unique type of healing
-        A love… divine
-        
-        I want to be here forever
-        I want to hold you near, whenever
-        Bless me with your smile
-        And never let go, ever
-        
-        I know this dance will end,
-        I know this is temporary…
-        `
-    }, {
-        chapter_id:"B",
-        id:"5",
-        title: "Promise",
-        subtitle: "July 02, 2017",
-        content: `
-        My eyes have already fallen asleep
-        Yet I keep writing I don’t know how
-        But it’s a promise I intend to keep,
-        So I won’t be stopping any time now
-        
-        I love you to death,
-        Till my final breath.
-        I want you to understand what you mean to me:
-        Every moment of everyday
-        My lungs get heavier as we’re farther away
-        
-        I’m writing to you as my eyes fade
-        My hands carving their final words
-        With every letter I’m screaming for aid
-        But my screams are left unheard
-        
-        There is no power left in me,
-        But a dream to send this to you
-        To be able to part the sea
-        And let the bottle run through…
-        
-        Please darling, 
-        
-        Tell me one last time
-        The story that I love so,
-        How we met under the stars
-        Dancing with the wind blow
-        
-        Paint for me again,
-        Such a beautiful picture for my mind,
-        Remind me where, remind me when
-        My heart became blind
-        
-        As I write to you this final note
-        It’s time for me to sail this boat
-        For the soul in me has escaped my hands
-        And if you never read this,
-        Then know I returned to sand.
-        
-        `
-    }, {
-        chapter_id:"B",
-        id:"6",
-        title: "Broken",
-        subtitle: "August 05, 2017",
-        content: `
-        I can’t have the same conversation again
-        Tell me how many times are you going to pretend
-        You love me to the core
-        
-        I’ve heard it a million times, and felt it a million more
-        I knew every time you walked through that door
-        There was someone else in your life
-        
-        What engagement? What wife?
-        Only false promises were given to me
-        
-        I can’t handle treachery
-        I’ll start to hate every memory
-        I built with you
-        
-        So what’s new?
-        More lies on the menu?
-        
-        Leave, so that with time, I might forgive you.
-        `
-    }, {
+    },  {
         chapter_id:"B",
         id:"7",
         title: "I Hate Myself",
@@ -220,36 +126,6 @@ var bdcs = {
         I hate who I am
         I will never say,
         I love myself.
-        `
-    }, {
-        chapter_id:"B",
-        id:"8",
-        title: "Who Am I Anymore",
-        subtitle: "October 12, 2017",
-        content: `
-        Will we meet again, in some utopian future
-        All grown and changed, with broken humor?
-
-        Will we meet again, and rekindle what was lost
-        Or continue with our lives like what we had, 
-        No more than a penny did it cost?
-        
-        Will we meet again, in an attempt to fix ourselves
-        Meet at a location arranged, or add bricks to our shells?
-
-        Is it best if we died alone, 
-        In different parts of the globe?
-        
-        Who am I anymore,
-        But a priest that lost purpose in his robe?
-        `
-    }, {
-        chapter_id:"B",
-        id:"9",
-        title: "Life",
-        subtitle: "-",
-        content: `
-        But I want to live...
         `
     }, {
         chapter_id:"D",

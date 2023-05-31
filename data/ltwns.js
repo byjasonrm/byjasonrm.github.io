@@ -30,36 +30,6 @@ var ltwns = {
     },
         {
         chapter_id:"B",
-        title: "The Strongest Person Ever",
-        subtitle: "",
-        content: `
-        Look in the mirror,
-        Tell me what do you see?
-        Surely, the strongest person ever,
-        Because I know my eyes
-        Can’t be deceiving me.
-        `
-    },
-        {
-        chapter_id:"B",
-        title: "Blessing",
-        subtitle: "",
-        content: `
-        To be the one your eyes meet,
-        What a blessing.
-        
-        To be the one your arms embrace,
-        What a blessing.
-        
-        To be the one to hear your voice,
-        What a blessing.
-        
-        To be blessed with this type of love,
-        What a blessing.
-        `
-    },
-        {
-        chapter_id:"B",
         title: "Someone Else",
         subtitle: "",
         content: `
@@ -67,17 +37,6 @@ var ltwns = {
         That “someone else” is out there…
         My love, I hope when I meet that someone
         It will be you.
-        `
-    },
-        {
-        chapter_id:"B",
-        title: "Like no other",
-        subtitle: "",
-        content: `
-        You loved me like no other
-        And you made my world so beautiful
-        Like the last letter in a story,
-        I finally feel complete.
         `
     },
         {
@@ -115,53 +74,15 @@ var ltwns = {
     },
         {
         chapter_id:"B",
-        title: "Spectacular",
-        subtitle: "",
-        content: `
-        The crackling sound of fire
-        The cold winter air breezing through
-        Is there something more spectacular tonight my dear,
-        More spectacular than you?
-        `
-    },
-        {
-        chapter_id:"B",
         title: "eyes like yours",
         subtitle: "",
         content: `
-        And so the wind carries us
-        Lifting our souls up to eternity
-        It’s so freeing isn’t it?
-        Flying above the world so carelessly
-
         …I’m sorry, I’m dreaming again
         But you must understand
         Eyes like yours, my dear
         Carry within them acres of land
-
-        And I get to fly in them over and over
-        A thousand times and it still feels new
-        Like the joy of finding a four leaf clover
-        That’s always been out your window view
-        
-        I will forever be mesmerized by them
-        And they will forever be the subject of my prose
-        Like the flower that begins to bloom:
-        The sun,
-        And her rose.
         `
-    },
-        {
-        chapter_id:"B",
-        title: "reflection",
-        subtitle: "",
-        content: `
-        I see in your eyes
-        A version of myself
-        I can love.
-        `
-    },
-        {
+    }, {
         chapter_id:"B",
         title: "do you love her?",
         subtitle: "",
@@ -179,66 +100,7 @@ var ltwns = {
         Give me the world,
         And I’ll say she’s already in my arms.
         `
-    },
-        {
-        chapter_id:"B",
-        title: "You are worthy",
-        subtitle: "",
-        content: `
-        Damn the world,
-        For making you feel unworthy
-        You are the very star that lights the sky
-        You are the warmth they desperately need
-        You are the symphony
-        That they desperately wish to sing,
-        You are what they cannot be
-        You are what their mirror begs to see
-        You are worthy,
-        And worthy you will forever be.
-        `
-    },
-        {
-        chapter_id:"B",
-        title: "the impossible moments",
-        subtitle: "",
-        content: `
-        I want the moments 
-        That are impossible to capture in photos
-        The memories
-        That will be forever engraved in me
-        I want to spend my entire life with you
-        And hold every single second of it 
-        Close to my heart
-        Because what else 
-        Would give me reason
-        To keep going?        
-        `
-    },
-        {
-        chapter_id:"B",
-        title: "i love you is an understatement",
-        subtitle: "",
-        content: `
-        To say I love you, only,
-        Would be an understatement
-        
-        The entire world
-        Could vanish and disappear
-        But it’d be alright, my dear,
-        As long as you’re still here.
-        `
-    },
-        {
-        chapter_id:"B",
-        title: "Your smile",
-        subtitle: "",
-        content: `
-        My life, my soul, my forever
-        Not only is your smile contagious
-        But it makes the rainy days better.
-        `
-    },
-        {
+    },  {
         chapter_id:"B",
         title: "Stay/Leave",
         subtitle: "",
