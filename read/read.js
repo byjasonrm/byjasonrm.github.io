@@ -19,14 +19,22 @@ checkLocal()
 
 $(document).ready(function(){
 
+    
     fillChapters()
     buildPage()
-
+    fillBooksList()
+    
     $(".go-home").click(function(){
         bubbleLoad()
     })
     $(".logo").click(function(){
         bubbleLoad()
+    })
+    $(".see-books").click(function(){
+        toggleBooksList()
+    })
+    $(".books-list-cover").click(function(){
+        hideBooksList()
     })
     $(".next-page").click(function(){
         movePage(1)
@@ -39,6 +47,9 @@ $(document).ready(function(){
         sharePage()
     })
 
+    $("a").click(function(){
+        bubbleLoad()
+    })
 
 
     $(".toggle-kitty").click(function(){
@@ -108,6 +119,64 @@ $(document).ready(function(){
         }
     })
 })
+
+function fillBooksList() {
+    let l = Books.list
+    for (let i = 0; i < l.length; i++) {
+        let readIcon
+        let readText
+        let readClass
+        if(l[i].id == bookid){
+            readIcon = `ph-caret-double-right`
+            readText = `Currently Reading`
+            readClass = `currently-reading`
+        }else{
+            readIcon = `ph-book-open`
+            readText = `Read`
+            readClass = ``
+        }
+
+        let $c = $(`
+        <a href="/read.html?id=${l[i].id}" class="book-list-item ${readClass}">
+            <div class="book-list-item-image">
+                <img src="${l[i].cover_book}" alt="">
+            </div>
+            <div class="book-list-item-text"> 
+            <span class="book-list-item-text-header"><i class="ph ${readIcon}"></i> ${readText}</span>
+                <span class="book-list-item-text-title">
+                ${l[i].title}
+                </span> 
+            </div>
+        </a>
+        `)
+        $(".books-list-container").append($c)
+    }
+
+}
+
+function toggleBooksList(){
+    if($(".books-list").hasClass("show-books-list")){
+        hideBooksList()
+    }else{
+        showBooksList()
+    }
+}
+
+function showBooksList(){
+    $(".see-books i").removeClass("ph-caret-down")
+    $(".see-books i").addClass("ph-caret-up")
+    $("nav").addClass("nav-active")
+    $(".books-list").addClass("show-books-list")
+    $(".books-list-cover").addClass("show-books-list-cover")
+}
+
+function hideBooksList(){
+    $(".see-books i").addClass("ph-caret-down")
+    $(".see-books i").removeClass("ph-caret-up")
+    $("nav").removeClass("nav-active")
+    $(".books-list").removeClass("show-books-list")
+    $(".books-list-cover").removeClass("show-books-list-cover")
+}
 
 function bubbleLoad(){
     $(".bubble-load-container").removeClass('hide-bubble-load')
@@ -278,7 +347,6 @@ function hideChaptersBox(){
 }
 
 function buildPage(){
-
     var title = book.page[currentPage].title
     var subtitle = book.page[currentPage].subtitle
     var content = book.page[currentPage].content
@@ -291,10 +359,10 @@ function buildPage(){
         $(".buy-book").removeClass("display-none")
         $(".buy-book-price").text("$"+bookdetails.price)
         $(".buy-book").attr("href", bookdetails.buy_link)
+        $(".buy-book-image img").attr("src", bookdetails.cover_book)
     }else{
         $(".full-book").removeClass("display-none")
     }
-
 }
 
 function movePage(direction){

@@ -44,20 +44,24 @@
    
     
     <nav>
-        <div class="go-home">
-            <a href="books.html" class="secondary-action">
-                <i class="ph ph-arrow-left go-home-text"></i> <span class="">Books</span></a>
-        </div>
+        <a href="index.html" class="go-home"> 
+                <i class="ph ph-house"></i> <span class="">Home</span>
+        </a>
 
-        <a href="index.html" class="logo"> <span class="logo-full">Jason R. M.</span> <span class="logo-small">Jason R.M.</span></a>
-        <div class="buy-option">
-            <a href="" class="buy-book primary-action display-none">
-                <span class="buy-book-text">Buy</span>
-                <span class="buy-book-price"></span>
-            </a>
-            <div class="full-book display-none">Full Free Read</div>
+        <div class="logo"> <span class="logo-full">Jason R. M.</span> <span class="logo-small">Jason R.M.</span></div>
+    
+        <div class="see-books">
+             <span class="">Books</span><i class="ph ph-caret-down"></i>
         </div>
     </nav>
+
+    <div class="books-list">
+        <div class="books-list-container">
+
+        </div>
+
+    </div>
+    <div class="books-list-cover"></div>
 
     <div class="bubble-load-container hide-bubble-load">
         <div class="bubble"></div>
@@ -130,19 +134,38 @@
         <button class="chapters button-toggle-off"><i class="ph ph-list-bullets"></i></button>
         <button class="previous-page"><i class="ph ph-caret-left"></i></button>
         <button class="next-page"><i class="ph ph-caret-right"></i></button>
-
         <button class="settings button-toggle-off"><i class="ph ph-sliders-horizontal"></i></button>
     </div>
 
 
 
     <div class="invisible"></div>
+    
+
+    
+    <div class="buy-option">
+        <div class="buy-option-container">
+            <div class="buy-book-image">
+                <img src="" alt="">
+            </div>
+            <div class="buy-book-text">
+                <div class="buy-book-title">Buy the ebook to enjoy the full read</div>
+                <div class="buy-book-description"></div>
+                <div class="buy-book-action">
+                    <a href="" class="buy-book primary-action display-none">
+                        <span class="">Buy</span>
+                        <span class="buy-book-price"></span>
+                    </a>
+                </div>
+            </div>            
+        </div>
+        <div class="full-book display-none">Full Free Read</div>
+    </div>
+    
+    
+    <div class="invisible"></div>
 
 
-
-
-
-    <!-- Canvas -->
     <canvas id="gameCanvas" width="800" height="100"></canvas>
     <script>
         var canvas = document.getElementById('gameCanvas');

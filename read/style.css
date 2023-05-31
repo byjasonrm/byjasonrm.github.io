@@ -191,16 +191,16 @@ nav{
     padding:20px 50px;
     margin-bottom:50px;
     align-items: center;
+    position:relative;
+    z-index:5;
 }
 .go-home{
     cursor:pointer;
-    width:20%;
 }
 .go-home-text{
     display:inline-block;
 }
 .logo{
-    width:60%;
     text-align: center;
     cursor:pointer;
 }
@@ -210,21 +210,13 @@ nav{
 .logo-small{
     display: none;
 }
-.buy-option{
-    width:20%;
-    text-align: right;
-}
-.buy-book{
-    display:inline-block;
-    width:fit-content;
-    cursor: pointer;
-    font-size:14px;
-    text-align: center;
-}
 .full-book{
     text-transform: uppercase;
     opacity:0.5;
     font-size:12px;
+}
+.see-books{
+    cursor:pointer;
 }
 .current-chapter{
     text-transform: uppercase;
@@ -236,26 +228,7 @@ nav{
 
 
 @media only screen and (max-width: 1000px) {
-    .go-home{
-        width:20%;
+    nav{
+        font-size:12px;
     }
-    .logo{
-        width:60%;
-    }
-    .buy-option{
-        width:20%;
-    }
-
-    .logo-full{
-        display:none;
-    }
-    .logo-small{
-        display:inline-block;
-    }
-    .go-home-text{
-        display:none;
-    }
-.buy-book-price{
-    display:none;
-}
 }
