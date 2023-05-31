@@ -278,6 +278,7 @@ function hideChaptersBox(){
 }
 
 function buildPage(){
+
     var title = book.page[currentPage].title
     var subtitle = book.page[currentPage].subtitle
     var content = book.page[currentPage].content
@@ -465,5 +466,6 @@ function setUpPage(p){
         currentPage = 0
     }
 
+    goToChapter(currentPage)
     
 }
