@@ -27,9 +27,9 @@ $(document).ready(function(){
     $(".go-home").click(function(){
         bubbleLoad()
     })
-    $(".logo").click(function(){
-        bubbleLoad()
-    })
+    // $(".logo").click(function(){
+    //     bubbleLoad()
+    // })
     $(".see-books").click(function(){
         toggleBooksList()
     })

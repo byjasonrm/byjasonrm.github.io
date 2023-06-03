@@ -24,9 +24,23 @@ featuresEl.addEventListener("pointermove", (ev) => {
 mainbook()
 General.creds()
 continueReading()
+ab()
 
 $(document).ready(function(){
 
+     $(".club-nav-menu").click(function(){
+        toggleNav()
+     })
+     $(".club-menu-col-list > a").click(function(){
+        hideNav()
+     })
+     $(".club-nav-active-cover").click(function(){
+        toggleNav()
+     })
+
+     $(".emerald-input input").on("input", function(){
+        $(".typewriter .emerald-shine").text($(this).val())
+     })
 
     if(ac == "readfree"){
         $('html, body').animate({
@@ -136,8 +150,40 @@ $(document).ready(function(){
 
 
 
+})
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
 });
 
+function toggleNav(){
+    if($(".club-nav").hasClass("club-nav-active")){
+        hideNav()
+    }else{  
+        showNav()
+    }
+}
+
+function showNav(){
+    $(".club-nav").addClass("club-nav-active")
+    if($(window).width() < 580 && $(window).width() > 360){
+        $(".club-nav").animate({'height': '450px'}, 300)
+    } else if($(window).width() < 360){
+        $(".club-nav").animate({'height': '650px'}, 300)
+    }else{
+        $(".club-nav").animate({'height': '300px'}, 300)
+    } 
+    $(".club-nav-active-cover").removeClass("display-none")
+}
+
+function hideNav(){
+    $(".club-nav").removeClass("club-nav-active")
+    $(".club-nav").animate({'height': '60px'}, 300)
+    $(".club-nav-active-cover").addClass("display-none")
+}
 
 
 function mainbook(){
@@ -151,7 +197,7 @@ function mainbook(){
         $(".main-book-price").text(m.price)
         $(".main-book .section-image img").attr("src", m.cover_main)
         $(".main-book .section-description").text(m.highlight_description)
-        $(".main-book .section-action .primary-action-button").attr("href", "/read.html?id="+m.id)
+        $(".main-book .section-action .primary-action-button").attr("href", m.buy_link)
         $(".main-book .section-action .secondary-action-button").attr("href", "/book.html?id="+m.id)
         for(let i=0; i < 3; i++){
             let $r = $("<div class='review'>" + m.reviews[i] + "</div>")
@@ -242,3 +288,16 @@ function prioritizeObjectById(array, id) {
 }
 
 
+function ab(){
+    let min = 0
+    let max = 2
+    let prob = Math.floor(Math.random() * (max - min + 1) ) + min
+
+    if(prob == 0){
+        $(".abm-1").removeClass("display-none")
+    }else if(prob == 1){
+        $(".abm-2").removeClass("display-none")
+    }else if(prob == 2){
+        $(".abm-3").removeClass("display-none")
+    }
+}

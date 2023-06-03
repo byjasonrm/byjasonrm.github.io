@@ -15,7 +15,7 @@ function setupbooks(){
         <div class="books-content-box-details-highlight">$${ Books.list[i].price }</div>
             <div class="books-content-box-details-action">
                 <a href="/book.html?id=${ Books.list[i].id }" class="books-content-box-details-action-learn-more books-action-button">Learn more</a>
-                <a href="/read.html?id=${ Books.list[i].id }" class="books-content-box-details-action-buy-now books-action-button">Read free</a>
+                <a href="${ Books.list[i].buy_link }" class="books-content-box-details-action-buy-now books-action-button">Buy now</a>
             </div>
 
         </div>
