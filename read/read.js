@@ -350,9 +350,11 @@ function buildPage(){
     var title = book.page[currentPage].title
     var subtitle = book.page[currentPage].subtitle
     var content = book.page[currentPage].content
+    var bookName = "'" + bookdetails.title + "'"
     $('#displayArea').text(content)
     $('#title').text(title)
     $('#subtitle').text(subtitle)
+    $('.signedbyjrm-book').text(bookName)
     getCurrentChapter()
 
     if(bookdetails.buy_link != ""){

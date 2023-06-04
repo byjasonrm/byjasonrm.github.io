@@ -161,6 +161,10 @@
     font-size:12px;
     font-weight:300;
 }
+.signedbyjrm-book{
+    font-size:14px;
+    font-weight:600;
+}
 .share-page-container{
     display:flex;
     align-items: center;
@@ -321,7 +325,7 @@
     display:flex;
     justify-content: center;
     width:90%;
-    margin:0 auto;
+    margin:0 auto 50px auto;    
 }
 .buy-option-container{
     display:flex;
