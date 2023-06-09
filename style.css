@@ -1596,6 +1596,66 @@ footer{
 
 
 
+.signature-logo{
+    width:100%;
+    padding:10px;
+    background:#000;
+    display:flex;
+    justify-content: center;
+}
+.signature-logo img{
+    max-width:70px;
+    margin:0 auto;
+    width:100%;
+}
+.links-page-light{
+    background: #f6f4f2;
+    color: #181818;
+}
+
+.links-page-books-list{
+    max-width:700px;
+    width:90%;
+    margin:20vh auto 10px auto;
+}
+
+.links-page-books-list-book{
+
+    background: #fff;
+    box-shadow: 0 5px 50px 5px #4f4f4f32;
+    display:flex;
+    flex-wrap: nowrap;
+    margin:20px 0;
+}
+
+.links-page-books-list-book-cover{
+    position:relative;
+    width:20%;
+    overflow: hidden;
+    padding:20px;
+}
+.links-page-books-list-book-cover img{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:50%;
+}
+.links-page-books-list-book-text{
+    width:80%;
+    padding:30px 20px;
+}
+.links-page-books-list-book-text-title{
+    font-weight:700;
+}
+.visit-website{
+    width:100%;
+    text-align: center;
+    padding:10px 5px;
+    margin:50px 0 100px 0;
+    opacity:0.3;
+    display:block;
+}
 
 
 

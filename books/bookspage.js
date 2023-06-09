@@ -1,6 +1,7 @@
 import * as Books from '../js/books.js'
 
 setupbooks()
+setupbookslinks()
 
 function setupbooks(){
     for(let i=0; i<Books.list.length; i++){
@@ -25,5 +26,25 @@ function setupbooks(){
         $(".books-content").append($b)
 
 
+    }
+}
+
+function setupbookslinks(){
+    let container = $(".links-page-books-list")
+
+    for(let i=0; i<Books.list.length; i++){
+        let $b = $(`
+        <a href="${ Books.list[i].buy_link }" class="links-page-books-list-book">
+            <div class="links-page-books-list-book-cover">
+                <img src="${ Books.list[i].cover_book }" alt="${ Books.list[i].title } Book Cover">
+            </div>
+            <div class="links-page-books-list-book-text">
+                Purchase <span class="links-page-books-list-book-text-title">"${ Books.list[i].title }"</span> - Downloadable Ebook
+            </div>
+        </a>
+        
+        `)
+
+        container.append($b)
     }
 }
