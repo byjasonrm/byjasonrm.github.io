@@ -69,8 +69,8 @@
                 <div class="club-menu-col-title">Membership</div>
                 <div class="club-menu-col-list">
                     <a href="#Gold" class="club-menu-col-list-item"> <img src="/assets/icons/royals/goldroyal.svg" alt="">   Gold Royal</a>
-                    <a href="#Diamond" class="club-menu-col-list-item"> <img src="/assets/icons/royals/diamondroyal.svg" alt="">   Diamond Royal</a>
-                    <a href="#Emerald" class="club-menu-col-list-item"> <img src="/assets/icons/royals/emeraldroyal.svg" alt="">   Emerald Royal</a>
+                    <!-- <a href="#Diamond" class="club-menu-col-list-item"> <img src="/assets/icons/royals/diamondroyal.svg" alt="">   Diamond Royal</a>
+                    <a href="#Emerald" class="club-menu-col-list-item"> <img src="/assets/icons/royals/emeraldroyal.svg" alt="">   Emerald Royal</a> -->
                 </div>
             </div>
             <div class="club-menu-col">
@@ -192,7 +192,7 @@
     </div>
 
     <!-- Diamond Royal -->
-    <div id="Diamond" class="club-diamond-section  club-section club-diamond-effect">
+    <!-- <div id="Diamond" class="club-diamond-section  club-section club-diamond-effect">
         <div class="club-section-content club-max-width">
             <div class="club-section-title">
                 <span class="diamond-shine">Diamond Royal</span>
@@ -281,11 +281,11 @@
               <span class="diamond-shine">Join as Diamond</span>   <i class="ph ph-arrow-right"></i></a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Emeral Royal -->
 
-    <div id="Emerald" class="club-emerald-section  club-section club-emerald-effect">
+    <!-- <div id="Emerald" class="club-emerald-section  club-section club-emerald-effect">
         <div class="club-section-content club-max-width">
             <div class="club-section-title">
                 <span class="emerald-shine">Emerald Royal</span>
@@ -377,7 +377,7 @@
               <span class="emerald-shine">Join as Emerald</span>   <i class="ph ph-arrow-right"></i></a>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div id="FAQ" class="club-section club-faq-section">
@@ -492,16 +492,23 @@
     <script>
             $(window).scroll(function(event){
         var nb = 100;
+            // var st = $(this).scrollTop()
+            // if (st >= $(".club-gold-section").offset().top - nb 
+            //     && st < $(".club-diamond-section").offset().top - nb){
+            //     $(".club-nav-image img").attr('src', '/assets/icons/royals/goldroyal.svg')
+            // } else if (st >= $(".club-diamond-section").offset().top - nb
+            // && st < $(".club-emerald-section").offset().top - nb) {
+            //     $(".club-nav-image img").attr('src', '/assets/icons/royals/diamondroyal.svg')
+            // }else if(st >= $(".club-emerald-section").offset().top - nb
+            // && st < $(".club-faq-section").offset().top - nb){
+            //     $(".club-nav-image img").attr('src', '/assets/icons/royals/emeraldroyal.svg')
+            // } else{
+            //     $(".club-nav-image img").attr('src', '/assets/icons/royals/dark.svg')
+            // }
         var st = $(this).scrollTop()
         if (st >= $(".club-gold-section").offset().top - nb 
-            && st < $(".club-diamond-section").offset().top - nb){
+            && st < $(".club-faq-section").offset().top - nb){
             $(".club-nav-image img").attr('src', '/assets/icons/royals/goldroyal.svg')
-        } else if (st >= $(".club-diamond-section").offset().top - nb
-        && st < $(".club-emerald-section").offset().top - nb) {
-            $(".club-nav-image img").attr('src', '/assets/icons/royals/diamondroyal.svg')
-        }else if(st >= $(".club-emerald-section").offset().top - nb
-        && st < $(".club-faq-section").offset().top - nb){
-            $(".club-nav-image img").attr('src', '/assets/icons/royals/emeraldroyal.svg')
         } else{
             $(".club-nav-image img").attr('src', '/assets/icons/royals/dark.svg')
         }
