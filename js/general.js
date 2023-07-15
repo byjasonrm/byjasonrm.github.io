@@ -1,5 +1,5 @@
 export const views = "35.1M+"
-export const supporters = "80.1K+"
+export const supporters = "80.7K+"
 export const likes = "5.1M+"
 
 export function creds(){

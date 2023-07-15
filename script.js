@@ -243,7 +243,7 @@ function continueReadingBuild(){
                     let progress;
 
         
-                    foundBookAndPage.pnb == 0 ? progress = 1 : progress = Math.round((foundBookAndPage.pnb*100)/foundBookAndPage.tp)
+                    foundBookAndPage.pnb == 0 ? progress = 0 : progress = Math.round((foundBookAndPage.pnb*100)/foundBookAndPage.tp)
                     $(".continue-reading").removeClass('display-none')
 
                     let $slide = $(`<div class="slide">
@@ -289,15 +289,15 @@ function prioritizeObjectById(array, id) {
 
 
 function ab(){
-    let min = 0
-    let max = 2
-    let prob = Math.floor(Math.random() * (max - min + 1) ) + min
+    // let min = 0
+    // let max = 2
+    // let prob = Math.floor(Math.random() * (max - min + 1) ) + min
 
-    if(prob == 0){
-        $(".abm-1").removeClass("display-none")
-    }else if(prob == 1){
-        $(".abm-2").removeClass("display-none")
-    }else if(prob == 2){
-        $(".abm-3").removeClass("display-none")
-    }
+    // if(prob == 0){
+    //     $(".abm-1").removeClass("display-none")
+    // }else if(prob == 1){
+    //     $(".abm-2").removeClass("display-none")
+    // }else if(prob == 2){
+    //     $(".abm-3").removeClass("display-none")
+    // }
 }

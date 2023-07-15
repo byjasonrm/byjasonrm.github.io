@@ -360,6 +360,12 @@
     transform:translateX(-50%);
 }
 
+.buy-book-supporter{
+    font-size:12px;
+    padding:10px 0 0 0;
+    color:#c0c0c0;
+}
+
 /* Canvas */
 #gameCanvas{
    position:fixed;
@@ -368,6 +374,21 @@
    background: linear-gradient(0deg, var(--body-background-color), transparent);
 }
 
+
+
+.gold-shine {
+    background: linear-gradient(90deg, #FFC14E 0, #e89700 10%, 
+    #FFC14E 20%, #e89700 30%, #FFC14E 40%, #e89700 50%, 
+    #FFC14E 60%, #e89700 70%, #FFC14E 80%, #e89700 90%, #FFC14E);
+    background-size: 1000% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 10s linear infinite;
+    animation: shine 10s linear infinite;
+}
 
 
 

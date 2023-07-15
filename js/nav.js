@@ -16,12 +16,12 @@ const navlinks = [
         specialStyle:''
     },
     {
-        text:"Join Club",
+        text:"Become a Supporter",
         link:"club.html",
         icon:`<i class="ph ph-crown-simple"></i>`,
         navClass:'nav-club',
         menuClass:'menu-club',
-        specialStyle:'diamond-shine'
+        specialStyle:'gold-shine'
     },
 ]
 

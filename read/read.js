@@ -8,112 +8,112 @@ $(".previous-page").addClass("disabled-action")
 
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
-const bookid = urlParams.get('id')
-const pagenbr = urlParams.get('page')
-const bookdetails = Books.list.find(x => x.id == bookid)
+let bookid = urlParams.get('id')
+let pagenbr = urlParams.get('page')
+let bookdetails = Books.list.find(x => x.id == bookid)
 let totalpages = 0
 let book
 
 var LSP
 checkLocal()
 
-$(document).ready(function(){
+$(document).ready(function () {
 
-    
+
     fillChapters()
     buildPage()
     fillBooksList()
-    
-    $(".go-home").click(function(){
+
+    $(".go-home").click(function () {
         bubbleLoad()
     })
     // $(".logo").click(function(){
     //     bubbleLoad()
     // })
-    $(".see-books").click(function(){
+    $(".see-books").click(function () {
         toggleBooksList()
     })
-    $(".books-list-cover").click(function(){
+    $(".books-list-cover").click(function () {
         hideBooksList()
     })
-    $(".next-page").click(function(){
+    $(".next-page").click(function () {
         movePage(1)
     })
-    $(".previous-page").click(function(){
+    $(".previous-page").click(function () {
         movePage(0)
     })
 
-    $(".share-page").click(function(){
+    $(".share-page").click(function () {
         sharePage()
     })
 
-    $("a").click(function(){
+    $("a").click(function () {
         bubbleLoad()
     })
 
 
-    $(".toggle-kitty").click(function(){
+    $(".toggle-kitty").click(function () {
         toggleKitty()
     })
-    $(".settings").click(function(){
+    $(".settings").click(function () {
         toggleSettings()
     })
-    $(".chapters").click(function(){
+    $(".chapters").click(function () {
         toggleChaptersBox()
     })
-    $(".chapters-container").on("click", "li", function(){
+    $(".chapters-container").on("click", "li", function () {
         goToChapter($(this).attr('id'))
     })
 
-    $(".tap-cover").click(function(){
+    $(".tap-cover").click(function () {
         hideSettings()
         hideChaptersBox()
         $(".tap-cover").addClass("display-none")
     })
 
-    $(".decrease-font-size").click(function(){
-        decreaseFontSize()        
+    $(".decrease-font-size").click(function () {
+        decreaseFontSize()
     })
 
-    $(".increase-font-size").click(function(){
+    $(".increase-font-size").click(function () {
         increaseFontSize()
     })
 
-    $(".toggle-font-style").click(function(){
+    $(".toggle-font-style").click(function () {
         toggleFontType()
     })
 
-    $(".toggle-mode").click(function(){
+    $(".toggle-mode").click(function () {
         toggleMode()
     })
 
-    $(".settings-serif").click(function(){
-        if($(".content-container > *").hasClass('sans-serif-font')){
+    $(".settings-serif").click(function () {
+        if ($(".content-container > *").hasClass('sans-serif-font')) {
             changeToSerif()
         }
     })
-    $(".settings-sans-serif").click(function(){
-        if($(".content-container > *").hasClass('serif-font')){
+    $(".settings-sans-serif").click(function () {
+        if ($(".content-container > *").hasClass('serif-font')) {
             changeToSansSerif()
         }
     })
-    $(".activate-light-mode").click(function(){
-        if(!$("body").hasClass('light-mode')){
+    $(".activate-light-mode").click(function () {
+        if (!$("body").hasClass('light-mode')) {
             changeToLightMode()
         }
     })
-    $(".activate-dark-mode").click(function(){
-        if($("body").hasClass('light-mode')){
+    $(".activate-dark-mode").click(function () {
+        if ($("body").hasClass('light-mode')) {
             changeToDarkMode()
         }
     })
 
-    $(".input-kitty-name").on('input', function(){
-        if($(this).val().trim().length < 30){
+    $(".input-kitty-name").on('input', function () {
+        if ($(this).val().trim().length < 30) {
             $(this).removeClass('alert-border')
             $(".alert-text").addClass('display-none')
             Storage.updateKittyName($(this).val().trim())
-        }else{
+        } else {
             $(this).addClass('alert-border')
             $(".alert-text").removeClass('display-none')
         }
@@ -126,11 +126,11 @@ function fillBooksList() {
         let readIcon
         let readText
         let readClass
-        if(l[i].id == bookid){
+        if (l[i].id == bookid) {
             readIcon = `ph-caret-double-right`
             readText = `Currently Reading`
             readClass = `currently-reading`
-        }else{
+        } else {
             readIcon = `ph-book-open`
             readText = `Read`
             readClass = ``
@@ -154,15 +154,15 @@ function fillBooksList() {
 
 }
 
-function toggleBooksList(){
-    if($(".books-list").hasClass("show-books-list")){
+function toggleBooksList() {
+    if ($(".books-list").hasClass("show-books-list")) {
         hideBooksList()
-    }else{
+    } else {
         showBooksList()
     }
 }
 
-function showBooksList(){
+function showBooksList() {
     $(".see-books i").removeClass("ph-caret-down")
     $(".see-books i").addClass("ph-caret-up")
     $("nav").addClass("nav-active")
@@ -170,7 +170,7 @@ function showBooksList(){
     $(".books-list-cover").addClass("show-books-list-cover")
 }
 
-function hideBooksList(){
+function hideBooksList() {
     $(".see-books i").addClass("ph-caret-down")
     $(".see-books i").removeClass("ph-caret-up")
     $("nav").removeClass("nav-active")
@@ -178,55 +178,55 @@ function hideBooksList(){
     $(".books-list-cover").removeClass("show-books-list-cover")
 }
 
-function bubbleLoad(){
+function bubbleLoad() {
     $(".bubble-load-container").removeClass('hide-bubble-load')
-    setTimeout(function(){
-        $(".bubble-load-container").addClass('hide-bubble-load') 
+    setTimeout(function () {
+        $(".bubble-load-container").addClass('hide-bubble-load')
     }, 1000)
 }
 
-function sharePage(){
+function sharePage() {
 
-    $("#shareLink").val("https://byjasonrm.com/read.html?id=" + bookid + "&page="+currentPage)
-    try{
+    $("#shareLink").val("https://byjasonrm.com/read.html?id=" + bookid + "&page=" + currentPage)
+    try {
         var copyText = document.getElementById("shareLink")
         copyText.select()
         copyText.setSelectionRange(0, 99999)
         navigator.clipboard.writeText(copyText.value)
         $(".copied-text").addClass('copied-text-appear')
-        setTimeout(function(){ $(".copied-text").removeClass('copied-text-appear') }, 2000)
-        
-    }catch(e){
+        setTimeout(function () { $(".copied-text").removeClass('copied-text-appear') }, 2000)
+
+    } catch (e) {
         $(".error-copy-text").removeClass('display-none')
-        setTimeout(function(){ $(".error-copy-text").addClass('display-none') }, 2000)
+        setTimeout(function () { $(".error-copy-text").addClass('display-none') }, 2000)
     }
 
 }
 
-function increaseFontSize(){
-    if(currentfontsize+2 > 30){
+function increaseFontSize() {
+    if (currentfontsize + 2 > 30) {
 
-    }else{
-        currentfontsize = currentfontsize+2
-        $("#displayArea").css({"font-size": currentfontsize+"px"})
-    }
-
-    Storage.updateFontSize(currentfontsize)
-}
-
-function decreaseFontSize(){
-    if(currentfontsize-2 < 10){
-
-    }else{
-        currentfontsize = currentfontsize-2
-        $("#displayArea").css({"font-size": currentfontsize+"px"})
+    } else {
+        currentfontsize = currentfontsize + 2
+        $("#displayArea").css({ "font-size": currentfontsize + "px" })
     }
 
     Storage.updateFontSize(currentfontsize)
+}
+
+function decreaseFontSize() {
+    if (currentfontsize - 2 < 10) {
+
+    } else {
+        currentfontsize = currentfontsize - 2
+        $("#displayArea").css({ "font-size": currentfontsize + "px" })
+    }
+
+    Storage.updateFontSize(currentfontsize)
 
 }
 
-function changeToLightMode(){
+function changeToLightMode() {
     $("body").addClass("light-mode")
     $(".logo img").addClass("invert")
     $(".activate-light-mode").addClass("active-button")
@@ -235,7 +235,7 @@ function changeToLightMode(){
 
 }
 
-function changeToDarkMode(){
+function changeToDarkMode() {
     $("body").removeClass("light-mode")
     $(".logo img").removeClass("invert")
     $(".activate-dark-mode").addClass("active-button")
@@ -243,7 +243,7 @@ function changeToDarkMode(){
     Storage.updateCurrentMode("dark")
 }
 
-function changeToSerif(){
+function changeToSerif() {
     $(".content-container > *").removeClass("sans-serif-font")
     $(".content-container > *").addClass("serif-font")
     $(".toggle-font-style").text("Sans-Serif Font")
@@ -252,7 +252,7 @@ function changeToSerif(){
     Storage.updateFontType("serif")
 }
 
-function changeToSansSerif(){
+function changeToSansSerif() {
     $(".content-container > *").removeClass("serif-font")
     $(".content-container > *").addClass("sans-serif-font")
     $(".toggle-font-style").text("Serif Font")
@@ -261,7 +261,7 @@ function changeToSansSerif(){
     Storage.updateFontType("sans-serif")
 }
 
-function goToChapter(t){
+function goToChapter(t) {
     currentPage = parseInt(t)
     buildPage()
     hideChaptersBox()
@@ -269,42 +269,42 @@ function goToChapter(t){
     Storage.updateCurrentPage(parseInt(t))
 }
 
-function getCurrentChapter(){
+function getCurrentChapter() {
     let found = book.chapter.find(x => x.id === book.page[currentPage].chapter_id)
     $(".current-chapter").text(found.title)
 }
 
-function toggleKitty(){
-    if($("#gameCanvas").hasClass("display-none")){
+function toggleKitty() {
+    if ($("#gameCanvas").hasClass("display-none")) {
 
         showKitty()
-    }else{
+    } else {
         hideKitty()
     }
-    
+
 }
 
-function showKitty(){
+function showKitty() {
     $("#gameCanvas").removeClass("display-none")
     $(".toggle-kitty").text("Hide Kitty")
     Storage.updateKittyVisibility(true)
 }
 
-function hideKitty(){
+function hideKitty() {
     $(".toggle-kitty").text("Show Kitty")
     $("#gameCanvas").addClass("display-none")
     Storage.updateKittyVisibility(false)
 }
 
-function toggleSettings(){
-    if($(".settings-container").hasClass("hide-popup-container")){
-       showSettings()
-    }else{
+function toggleSettings() {
+    if ($(".settings-container").hasClass("hide-popup-container")) {
+        showSettings()
+    } else {
         hideSettings()
     }
 }
 
-function showSettings(){
+function showSettings() {
     hideChaptersBox()
 
     $(".settings-container").removeClass("hide-popup-container")
@@ -314,22 +314,22 @@ function showSettings(){
 
 }
 
-function hideSettings(){
+function hideSettings() {
     $(".settings-container").addClass("hide-popup-container")
     $(".settings").addClass("button-toggle-off")
     $(".settings").removeClass("button-toggle")
     $(".tap-cover").addClass("display-none")
 }
 
-function toggleChaptersBox(){
-    if($(".chapters-container").hasClass("hide-popup-container")){
+function toggleChaptersBox() {
+    if ($(".chapters-container").hasClass("hide-popup-container")) {
         showChaptersBox()
-    }else{
+    } else {
         hideChaptersBox()
     }
 }
 
-function showChaptersBox(){
+function showChaptersBox() {
     hideSettings()
 
     $(".chapters-container").removeClass("hide-popup-container")
@@ -338,15 +338,15 @@ function showChaptersBox(){
     $(".tap-cover").removeClass("display-none")
 }
 
-function hideChaptersBox(){
+function hideChaptersBox() {
     $(".chapters-container").addClass("hide-popup-container")
-        $(".chapters").addClass("button-toggle-off")
-        $(".chapters").removeClass("button-toggle")
-        $(".tap-cover").addClass("display-none")
+    $(".chapters").addClass("button-toggle-off")
+    $(".chapters").removeClass("button-toggle")
+    $(".tap-cover").addClass("display-none")
 
 }
 
-function buildPage(){
+function buildPage() {
     var title = book.page[currentPage].title
     var subtitle = book.page[currentPage].subtitle
     var content = book.page[currentPage].content
@@ -357,26 +357,26 @@ function buildPage(){
     $('.signedbyjrm-book').text(bookName)
     getCurrentChapter()
 
-    if(bookdetails.buy_link != ""){
+    if (bookdetails.buy_link != "") {
         $(".buy-book").removeClass("display-none")
-        $(".buy-book-price").text("$"+bookdetails.price)
+        $(".buy-book-price").text("$" + bookdetails.price)
         $(".buy-book").attr("href", bookdetails.buy_link)
         $(".buy-book-image img").attr("src", bookdetails.cover_book)
-    }else{
+    } else {
         $(".full-book").removeClass("display-none")
     }
 }
 
-function movePage(direction){
+function movePage(direction) {
 
-    if(direction == 1){
-        if(currentPage+1 <= book.page.length - 1){
+    if (direction == 1) {
+        if (currentPage + 1 <= book.page.length - 1) {
             currentPage++
             disableStatus()
             buildPage()
         }
-    }else{
-        if(currentPage-1 >= 0){
+    } else {
+        if (currentPage - 1 >= 0) {
             currentPage--
             disableStatus()
             buildPage()
@@ -386,21 +386,22 @@ function movePage(direction){
     Storage.updateCurrentPage(currentPage)
 }
 
-function disableStatus(){
+function disableStatus() {
 
-        currentPage+1 >= book.page.length ? $(".next-page").addClass("disabled-action") : $(".next-page").removeClass("disabled-action")
-        currentPage-1 < 0 ? $(".previous-page").addClass("disabled-action") : $(".previous-page").removeClass("disabled-action")
-    
+    currentPage + 1 >= book.page.length ? $(".next-page").addClass("disabled-action") : $(".next-page").removeClass("disabled-action")
+    currentPage - 1 < 0 ? $(".previous-page").addClass("disabled-action") : $(".previous-page").removeClass("disabled-action")
+
 }
 
-function fillChapters(){
+function fillChapters() {
+
     let list = groupByChapter(book.chapter, book.page)
 
-    for(let i=0; i < list.length; i++){
-        let $chapter = $(`<div class="chapter-title"> ${ list[i].chapterTitle} </div>`)
+    for (let i = 0; i < list.length; i++) {
+        let $chapter = $(`<div class="chapter-title"> ${list[i].chapterTitle} </div>`)
         let $li;
         let $ul = $(`<ul></ul>`)
-        for(let j=0; j<list[i].items.length; j++){
+        for (let j = 0; j < list[i].items.length; j++) {
 
             $li = $(`<li id='${list[i].items[j].id}'> ${list[i].items[j].title} </li>`)
             $ul.append($li)
@@ -414,7 +415,7 @@ function groupByChapter(chapterList, otherList) {
     let globalIndex = 0;
     return chapterList.map(chapter => {
         let items = otherList.filter(item => item.chapter_id === chapter.id)
-                             .map(item => ({id: globalIndex++, title: item.title}));
+            .map(item => ({ id: globalIndex++, title: item.title }));
         return {
             id: chapter.id,
             chapterTitle: chapter.title,
@@ -425,24 +426,24 @@ function groupByChapter(chapterList, otherList) {
 
 
 
-function checkLocal(){
+function checkLocal() {
     LSP = JSON.parse(localStorage.getItem("JRMUSER"));
-    if(LSP == "" || LSP == undefined || LSP == null){
-      newLocalData()
-    }else{
-      setLocalData()
+    if (LSP == "" || LSP == undefined || LSP == null) {
+        newLocalData()
+    } else {
+        setLocalData()
     }
 
     setUpLocal()
 }
 
-function newLocalData(){
+function newLocalData() {
     Storage.createUserID()
     Storage.AddToLocalStorage()
     Storage.addBook(bookid, totalpages)
 }
 
-function setLocalData(){
+function setLocalData() {
     Storage.user.id = LSP.id
     Storage.user.bookAndPage = LSP.bookAndPage
     Storage.user.currentChapter = LSP.currentChapter
@@ -453,8 +454,12 @@ function setLocalData(){
     Storage.user.kittyVisibilityStatus = LSP.kittyVisibilityStatus
 }
 
-function setUpLocal(){
+function setUpLocal() {
 
+    if (bookid === null) {
+        bookid = 'bdcs'
+        bookdetails = Books.list.find(x => x.id == bookid)
+    }
 
     Storage.updateCurrentBook(bookid)
 
@@ -462,27 +467,27 @@ function setUpLocal(){
 
     if (found) {
         configurePage(bookid, found)
-    }else{
+    } else {
         Storage.addBook(bookid, totalpages)
         let found = Storage.user.bookAndPage.find(x => x.bid == bookid)
         configurePage(bookid, found)
     }
 
 
-    
-    if(Storage.user.currentMode == ""){
+
+    if (Storage.user.currentMode == "") {
         changeToLightMode()
-    }else if(Storage.user.currentMode == "dark"){
+    } else if (Storage.user.currentMode == "dark") {
         changeToDarkMode()
     }
-    
-
-    $("#displayArea").css({"font-size": Storage.user.currentFontSize+"px"}) 
 
 
-    if(Storage.user.currentFontType == "serif"){
+    $("#displayArea").css({ "font-size": Storage.user.currentFontSize + "px" })
+
+
+    if (Storage.user.currentFontType == "serif") {
         changeToSerif()
-    }else if(Storage.user.currentFontType == "sans-serif"){
+    } else if (Storage.user.currentFontType == "sans-serif") {
         changeToSansSerif()
     }
 
@@ -493,49 +498,50 @@ function setUpLocal(){
 
 }
 
-function configurePage(n, p){
-    if(n == '' || n == undefined || n == null){
-        window.location.href = './404.html'
-    }else{
-        if(n == "ltwns"){
-            book = ltwns
-            totalpages = ltwns.page.length - 1
-            Storage.updateTotalPages(n, totalpages)
-        }else if(n == "bdcs"){
-            book = bdcs
-            totalpages = bdcs.page.length - 1
-            Storage.updateTotalPages(n, totalpages)
-        }else if(n == "utss"){
-            book = utss
-            totalpages = utss.page.length - 1
-            Storage.updateTotalPages(n, totalpages)
-        }
+function configurePage(n, p) {
 
-        setUpPage(p)
-
-
+    if (n == "ltwns") {
+        book = ltwns
+        totalpages = ltwns.page.length - 1
+        Storage.updateTotalPages(n, totalpages)
+    } else if (n == "bdcs") {
+        book = bdcs
+        totalpages = bdcs.page.length - 1
+        Storage.updateTotalPages(n, totalpages)
+    } else if (n == "utss") {
+        book = utss
+        totalpages = utss.page.length - 1
+        Storage.updateTotalPages(n, totalpages)
+    } else {
+        n = "bdcs"
+        book = bdcs
+        totalpages = bdcs.page.length - 1
+        Storage.updateTotalPages(n, totalpages)
     }
+
+    setUpPage(p)
 
 }
 
-function setUpPage(p){
-    if(p.pnb && p.pnb >=0){
-        if(p.pnb > book.page.length){
+function setUpPage(p) {
+
+    if (p.pnb && p.pnb >= 0) {
+        if (p.pnb > book.page.length) {
             Storage.updateCurrentPage(0)
             currentPage = 0
-        }else{
+        } else {
             if (pagenbr) {
                 Storage.updateCurrentPage(parseInt(pagenbr))
                 currentPage = pagenbr
-            }else{
+            } else {
                 currentPage = p.pnb
             }
-        }        
-    }else{
+        }
+    } else {
         Storage.updateCurrentPage(0)
         currentPage = 0
     }
 
     goToChapter(currentPage)
-    
+
 }
