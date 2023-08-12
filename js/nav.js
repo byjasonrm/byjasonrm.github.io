@@ -15,14 +15,7 @@ const navlinks = [
         menuClass:'menu-shop',
         specialStyle:''
     },
-    {
-        text:"Become a Supporter",
-        link:"club.html",
-        icon:`<i class="ph ph-crown-simple"></i>`,
-        navClass:'nav-club',
-        menuClass:'menu-club',
-        specialStyle:'gold-shine'
-    },
+
 ]
 
 $(document).ready(function(){
@@ -92,3 +85,12 @@ function createMenu(){
     menu.append($menuclose)
     menu.append($menucontent)
 }
+
+// {
+//     text:"Become a Supporter",
+//     link:"club.html",
+//     icon:`<i class="ph ph-crown-simple"></i>`,
+//     navClass:'nav-club',
+//     menuClass:'menu-club',
+//     specialStyle:'gold-shine'
+// },

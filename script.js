@@ -147,7 +147,18 @@ $(document).ready(function(){
         }
     });
 
+    $(".slides").on('click', ".remove-from-queue", function(){
+        var GetId = $(this).attr("id")
+        var IdSplit = GetId.split('-')
+        var Id = IdSplit[1]
 
+        let bnpArray = Storage.removeBook(Id, LSP.bookAndPage)
+
+        bnpArray.length ? Storage.updateCurrentBook(bnpArray[0].bid) : Storage.updateCurrentBook("")
+
+        continueReading()
+
+    });
 
 
 })
@@ -213,15 +224,30 @@ function continueReading(){
     if(LSP == "" || LSP == undefined || LSP == null){
       
     }else{
+    setLocalData()
       continueReadingBuild()
     }
 
 
 }
 
+function setLocalData() {
+    Storage.user.id = LSP.id
+    Storage.user.bookAndPage = LSP.bookAndPage
+    Storage.user.currentBook = LSP.currentBook
+    Storage.user.currentChapter = LSP.currentChapter
+    Storage.user.currentMode = LSP.currentMode
+    Storage.user.currentFontSize = LSP.currentFontSize
+    Storage.user.currentFontType = LSP.currentFontType
+    Storage.user.kittyName = LSP.kittyName
+    Storage.user.kittyVisibilityStatus = LSP.kittyVisibilityStatus
+}
+
 function continueReadingBuild(){
+
     if(LSP.currentBook != ""){
         if(LSP.bookAndPage.length > 0){
+            
             let temp;
 
             if(LSP.bookAndPage.length > 1){
@@ -230,7 +256,8 @@ function continueReadingBuild(){
             }else{
                 temp = LSP.bookAndPage
             }
-
+            
+            $('.slides').empty()
 
             for(let i=0; i<temp.length; i++){
                 let foundBookAndPage = LSP.bookAndPage.find(x => x.bid == temp[i].bid)
@@ -243,35 +270,43 @@ function continueReadingBuild(){
                     let progress;
 
         
-                    foundBookAndPage.pnb == 0 ? progress = 0 : progress = Math.round((foundBookAndPage.pnb*100)/foundBookAndPage.tp)
+                    foundBookAndPage.pnb == 0 ? progress = 1 : progress = Math.round((foundBookAndPage.pnb*100)/foundBookAndPage.tp)
                     $(".continue-reading").removeClass('display-none')
 
                     let $slide = $(`<div class="slide">
-                    <div class="continue-reading-book-image">
-                        <img src="${foundBookDetails.cover_book}" alt="">
-                    </div>
-                    <div class="continue-reading-content">
-                        <div class="continue-reading-small-title">Continue Reading</div>
-                        <div class="continue-reading-title">${foundBookDetails.title}</div>
-                        <div class="continue-reading-progress-bar-container">
-                            <div class="continue-reading-progress-bar" style="width:${progress}%">
+                        <div class="continue-reading-book-image">
+                            <img src="${foundBookDetails.cover_book}" alt="">
+                        </div>
+                        <div class="continue-reading-content">
+                            <div class="continue-reading-small-title">Continue Reading</div>
+                            <div class="continue-reading-title">${foundBookDetails.title}</div>
+                            <div class="continue-reading-progress-bar-container">
+                                <div class="continue-reading-progress-bar" style="width:${progress}%">
+                                </div>
                             </div>
+                            <div class="continue-reading-percentage-completed">
+                                <span class="continue-reading-percentage-completed-text">${progress}</span>% Complete
+                            </div>
+                        
+                            <a href="/read.html?id=${temp[i].bid}&page=${foundBookAndPage.pnb}" class="action-button primary-action-button"> Continue reading <i class="ph ph-arrow-right"></i> </a>
+
+                            
                         </div>
-                        <div class="continue-reading-percentage-completed">
-                            <span class="continue-reading-percentage-completed-text">${progress}</span>% Complete
-                        </div>
-                        <a href="/read.html?id=${temp[i].bid}&page=${foundBookAndPage.pnb}" class="action-button primary-action-button"> Continue reading <i class="ph ph-arrow-right"></i> </a>
-                    </div>
                     </div>`)
 
-
+                    // <button class="remove-from-queue" id="fbnp-${foundBookDetails.id}"><i class="ph ph-x"></i> Remove from Queue</button>
+                    
                     $(".slides").append($slide)
-
                 }
 
             }
 
+            
+
         }
+    }else{
+        $(".continue-reading").addClass('display-none')
+        $('.slides').empty()
     }
 }
 

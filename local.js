@@ -21,6 +21,19 @@ export function addBook(bid, tp){
     user.bookAndPage.push(obj)
     AddToLocalStorage()
 }
+export function removeBook(bid, array){
+
+  var elementIndex = array.findIndex(function(element) {
+      return element.bid === bid;
+  });    
+  if (elementIndex !== -1) {
+    array.splice(elementIndex, 1);
+  } 
+  user.bookAndPage = array
+  AddToLocalStorage()
+  return array
+}
+
 export function updateCurrentBook(id) {
   user.currentBook = id
   AddToLocalStorage()

@@ -314,6 +314,17 @@ a{
     margin:0 0 50px 0;
 }
 
+.remove-from-queue{
+    background:transparent;
+    border:transparent;
+    color:#fff;
+    opacity:0.5;
+}
+
+.remove-from-queue:hover{
+    cursor:pointer;
+}
+
 @keyframes changeBackgroundColor {
 	0% {
 		background-position: 0% 50%;
@@ -1647,6 +1658,17 @@ footer{
 }
 .links-page-books-list-book-text-title{
     font-weight:700;
+}
+.books-content-box-new{
+    padding:0 0 10px 0;
+}
+.books-content-box-new span{
+    background:#0071e3;
+    color:#fff;
+    font-size:10px;
+    padding:5px 10px;
+    border-radius: 100px;
+    
 }
 .visit-website{
     width:100%;

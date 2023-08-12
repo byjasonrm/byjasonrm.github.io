@@ -6,12 +6,18 @@ setupbookslinks()
 function setupbooks(){
     for(let i=0; i<Books.list.length; i++){
 
+        let main;
+        Books.list[i].mainbook ? main = "" : main = "display-none"
+
+
         let $b = $(`
         <div class="books-content-box">
+        
         <div class="books-content-box-cover">
             <img src="${ Books.list[i].cover_book }" alt="${ Books.list[i].title } Book Cover">
         </div>
         <div class="books-content-box-details">
+        <div class="books-content-box-new ${main}"> <span>NEW</span></div>
         <h2 class="books-content-box-details-title">${ Books.list[i].title }</h2>
         <div class="books-content-box-details-highlight">$${ Books.list[i].price }</div>
             <div class="books-content-box-details-action">
@@ -33,13 +39,18 @@ function setupbookslinks(){
     let container = $(".links-page-books-list")
 
     for(let i=0; i<Books.list.length; i++){
+        let main;
+        Books.list[i].mainbook ? main = "" : main = "display-none"
+
         let $b = $(`
         <a href="${ Books.list[i].buy_link }" class="links-page-books-list-book">
             <div class="links-page-books-list-book-cover">
                 <img src="${ Books.list[i].cover_book }" alt="${ Books.list[i].title } Book Cover">
             </div>
             <div class="links-page-books-list-book-text">
+                <div class="books-content-box-new ${main}"> <span>NEW</span></div>
                 Purchase <span class="links-page-books-list-book-text-title">"${ Books.list[i].title }"</span> - Downloadable Ebook
+                
             </div>
         </a>
         

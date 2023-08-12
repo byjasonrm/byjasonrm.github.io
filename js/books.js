@@ -1,5 +1,32 @@
 export const list = [
     {
+        id:"fy",
+        title:"Forever You",
+        title_logo:"./assets/images/fy/fy-logo.svg",
+        cover_main:"./assets/images/fy/fy-main.png",
+        cover_book:"./assets/images/fy/fy-book.png",
+        bgColor:"#131313",
+        brandColor:"#DD9F00",
+        pageBG:"./assets/images/utss/utss-bg.svg",
+        release_date:"Aug. 12, 2023",
+        language:"English",
+        description:`“Forever You” is a short or "pocket" poetry e-book that contains a collection of romantic poems for your one true love.`,
+        highlight_description:"“Maybe you’ll move on from me, but in my papers, we’re still meant to be…”",
+        genres:"Poetry, Love",
+        words:"600+",
+        pages:"20+",
+        price:"2.99",
+        buy_link:"https://bit.ly/3KCui93",
+        sold_out:false,
+        reviews:["“Kind, loving, and warm.”",
+        "“I LOVED IT!”",
+        "“This was a beautiful read.”",
+        "“Packs a punch, a good one.”",
+        "“I cried, this was so sweet and heartfelt.”",
+        "“I know what I'm gifting my wife this coming anniversary.”"],
+        mainbook: true
+    },
+    {
         id:"bdcs",
         title:"Broken Dreams In The City of Stars",
         title_logo:"./assets/images/bdcs/bdcs-logo.svg",
@@ -24,7 +51,7 @@ export const list = [
         "“Complex and heartbreaking.”",
         "“It felt like a short film.”",
         "“I know it's a short story, but I want more.”"],
-        mainbook: true
+        mainbook: false
     },
     {
         id:"ltwns",

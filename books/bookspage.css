@@ -52,7 +52,21 @@
     text-transform: capitalize;
 }
 
-@media only screen and (max-width: 1350px) {
+.books-content-box-new{
+    width:100%;
+    padding:10px 0;
+
+}
+
+.books-content-box-new span{
+    background:#0071e3;
+    color:#fff;
+    font-size:10px;
+    padding:5px 10px;
+    border-radius: 100px;
+}
+
+@media only screen and (max-width: 1380px) {
     .books-content-box{
         width: 100%;
     }
@@ -66,6 +80,7 @@
     }
     .books-content-box-details{
         padding:0 10px;
+        width: 100%;
     }
     .books-action-button{
         display:block;

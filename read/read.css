@@ -64,7 +64,7 @@
     background:var(--body-background-color);
     z-index:4;
     box-shadow:0 5px 50px 5px var(--container-shadow-color);
-    transition: top ease 1s;
+    transition: top ease 0.3s;
     padding:80px 50px 50px 50px;
     max-height:80vh;
     overflow-y:auto;
@@ -88,7 +88,7 @@
 }
 .show-books-list{
     top:0px;
-    transition: top ease 1s;
+    transition: top ease 0.3s;
 }
 .nav-active{
     background:var(--body-background-color);

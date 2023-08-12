@@ -132,7 +132,7 @@ function fillBooksList() {
             readClass = `currently-reading`
         } else {
             readIcon = `ph-book-open`
-            readText = `Read`
+            readText = `Read Free version`
             readClass = ``
         }
 
@@ -446,6 +446,7 @@ function newLocalData() {
 function setLocalData() {
     Storage.user.id = LSP.id
     Storage.user.bookAndPage = LSP.bookAndPage
+    Storage.user.currentBook = LSP.currentBook
     Storage.user.currentChapter = LSP.currentChapter
     Storage.user.currentMode = LSP.currentMode
     Storage.user.currentFontSize = LSP.currentFontSize
@@ -499,7 +500,7 @@ function setUpLocal() {
 }
 
 function configurePage(n, p) {
-
+    
     if (n == "ltwns") {
         book = ltwns
         totalpages = ltwns.page.length - 1
@@ -512,12 +513,18 @@ function configurePage(n, p) {
         book = utss
         totalpages = utss.page.length - 1
         Storage.updateTotalPages(n, totalpages)
+    } else if (n == "fy") {
+        book = fy
+        totalpages = fy.page.length - 1
+        Storage.updateTotalPages(n, totalpages)
     } else {
         n = "bdcs"
         book = bdcs
         totalpages = bdcs.page.length - 1
         Storage.updateTotalPages(n, totalpages)
     }
+
+    
 
     setUpPage(p)
 
