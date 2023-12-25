@@ -15,7 +15,7 @@ export const list = [
         genres:"Poetry, Love",
         words:"600+",
         pages:"20+",
-        price:"2.99",
+        price:"4.99",
         buy_link:"https://bit.ly/3KCui93",
         sold_out:false,
         reviews:["“Kind, loving, and warm.”",
