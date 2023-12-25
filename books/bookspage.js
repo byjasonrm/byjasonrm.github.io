@@ -17,7 +17,7 @@ function setupbooks(){
             <img src="${ Books.list[i].cover_book }" alt="${ Books.list[i].title } Book Cover">
         </div>
         <div class="books-content-box-details">
-        <div class="books-content-box-new ${main}"> <span>NEW</span></div>
+        <div class="books-content-box-new ${main}"> <span>LATEST</span></div>
         <h2 class="books-content-box-details-title">${ Books.list[i].title }</h2>
         <div class="books-content-box-details-highlight">$${ Books.list[i].price }</div>
             <div class="books-content-box-details-action">
@@ -48,7 +48,7 @@ function setupbookslinks(){
                 <img src="${ Books.list[i].cover_book }" alt="${ Books.list[i].title } Book Cover">
             </div>
             <div class="links-page-books-list-book-text">
-                <div class="books-content-box-new ${main}"> <span>NEW</span></div>
+                <div class="books-content-box-new ${main}"> <span>LATEST</span></div>
                 Purchase <span class="links-page-books-list-book-text-title">"${ Books.list[i].title }"</span> - Downloadable Ebook
                 
             </div>

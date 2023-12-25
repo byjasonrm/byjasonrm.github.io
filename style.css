@@ -23,8 +23,8 @@
     box-sizing: border-box;
 }
 
-body{
-    background:#131313;
+html,body{
+    background:#000;
 }
 
 .max-width{
@@ -1627,11 +1627,10 @@ footer{
 .links-page-books-list{
     max-width:700px;
     width:90%;
-    margin:20vh auto 10px auto;
+    margin:10vh auto 0px auto;
 }
 
 .links-page-books-list-book{
-
     background: #fff;
     box-shadow: 0 5px 50px 5px #4f4f4f32;
     display:flex;
@@ -1675,7 +1674,7 @@ footer{
     text-align: center;
     padding:10px 5px;
     margin:50px 0 100px 0;
-    opacity:0.3;
+    opacity:0.7;
     display:block;
 }
 
