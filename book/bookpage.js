@@ -35,7 +35,7 @@ $(document).ready(function(){
 function setupbook(b){
     $(".buy-book-button").attr("href", b.buy_link)
     $(".book-price").text(b.price)
-    $(".read-free-version-button").attr("href", "/read.html?id="+b.id)
+    $(".read-free-version-button").attr("href", b.playlist_link)
     $(".book-information-details-title-logo").attr("src", b.title_logo)
     $(".book-information-details-title-cover").attr("src", b.cover_book)
     $(".description-text").text(b.description)
