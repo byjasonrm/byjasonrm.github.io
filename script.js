@@ -208,7 +208,11 @@ function mainbook(){
         $(".main-book-price").text(m.price)
         $(".main-book .section-image img").attr("src", m.cover_main)
         $(".main-book .section-description").text(m.highlight_description)
-        $(".main-book .section-action .primary-action-button").attr("href", m.buy_link)
+        if(m.sold_out){
+            $(".main-book .section-action .primary-action-button").addClass("display-none")
+        }else{
+            $(".main-book .section-action .primary-action-button").attr("href", m.buy_link)
+        }
         $(".main-book .section-action .secondary-action-button").attr("href", "/book.html?id="+m.id)
         for(let i=0; i < 3; i++){
             let $r = $("<div class='review'>" + m.reviews[i] + "</div>")

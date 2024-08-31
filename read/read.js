@@ -358,10 +358,15 @@ function buildPage() {
     getCurrentChapter()
 
     if (bookdetails.buy_link != "") {
-        $(".buy-book").removeClass("display-none")
-        $(".buy-book-price").text("$" + bookdetails.price)
-        $(".buy-book").attr("href", bookdetails.buy_link)
         $(".buy-book-image img").attr("src", bookdetails.cover_book)
+
+       if(bookdetails.sold_out){
+           $(".buy-option").addClass('display-none')
+        }else{
+            $(".buy-book").removeClass("display-none")
+            $(".buy-book-price").text("$" + bookdetails.price)
+            $(".buy-book").attr("href", bookdetails.buy_link)
+       }
     } else {
         $(".full-book").removeClass("display-none")
     }

@@ -33,8 +33,15 @@ $(document).ready(function(){
 })
 
 function setupbook(b){
-    $(".buy-book-button").attr("href", b.buy_link)
-    $(".book-price").text(b.price)
+    if(b.sold_out){
+        $(".buy-book-button").attr("href", "#")
+        $(".buy-book-button").text("Sold Out")
+        $(".buy-book-button").removeClass('buy-book-button')
+    }else{
+        $(".buy-book-button").attr("href", b.buy_link)
+        $(".book-price").text(b.price)
+    }
+    
     // $(".read-free-version-button").attr("href", b.playlist_link)
     $(".read-free-version-button").attr("href", "/read.html?id="+b.id)
     $(".book-information-details-title-logo").attr("src", b.title_logo)
